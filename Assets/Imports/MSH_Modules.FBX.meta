@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 3168882d06c8bd54d81bc422a247d2f8
+timeCreated: 1506355988
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: MSH_Floor
+    100002: //RootNode
+    100004: MSH_Room_Double
+    100006: MSH_Room_DoubleDoor_Front
+    100008: MSH_Room_Quad
+    100010: MSH_Room_SingleDoor_Front
+    100012: MSH_Room_SingleDoor_Side
+    100014: MSH_Stairs_Basement
+    100016: MSH_Stairs_Escape
+    100018: MSH_Wall_Corner
+    100020: MSH_Wall_Front
+    100022: MSH_Wall_Side
+    100024: MSH_Window_Corner
+    100026: MSH_Window_Front
+    100028: MSH_Window_Side
+    400000: MSH_Floor
+    400002: //RootNode
+    400004: MSH_Room_Double
+    400006: MSH_Room_DoubleDoor_Front
+    400008: MSH_Room_Quad
+    400010: MSH_Room_SingleDoor_Front
+    400012: MSH_Room_SingleDoor_Side
+    400014: MSH_Stairs_Basement
+    400016: MSH_Stairs_Escape
+    400018: MSH_Wall_Corner
+    400020: MSH_Wall_Front
+    400022: MSH_Wall_Side
+    400024: MSH_Window_Corner
+    400026: MSH_Window_Front
+    400028: MSH_Window_Side
+    2300000: MSH_Floor
+    2300002: MSH_Room_Double
+    2300004: MSH_Room_DoubleDoor_Front
+    2300006: MSH_Room_Quad
+    2300008: MSH_Room_SingleDoor_Front
+    2300010: MSH_Room_SingleDoor_Side
+    2300012: MSH_Stairs_Basement
+    2300014: MSH_Stairs_Escape
+    2300016: MSH_Wall_Corner
+    2300018: MSH_Wall_Front
+    2300020: MSH_Wall_Side
+    2300022: MSH_Window_Corner
+    2300024: MSH_Window_Front
+    2300026: MSH_Window_Side
+    3300000: MSH_Floor
+    3300002: MSH_Room_Double
+    3300004: MSH_Room_DoubleDoor_Front
+    3300006: MSH_Room_Quad
+    3300008: MSH_Room_SingleDoor_Front
+    3300010: MSH_Room_SingleDoor_Side
+    3300012: MSH_Stairs_Basement
+    3300014: MSH_Stairs_Escape
+    3300016: MSH_Wall_Corner
+    3300018: MSH_Wall_Front
+    3300020: MSH_Wall_Side
+    3300022: MSH_Window_Corner
+    3300024: MSH_Window_Front
+    3300026: MSH_Window_Side
+    4300000: MSH_Stairs_Escape
+    4300002: MSH_Stairs_Basement
+    4300004: MSH_Window_Corner
+    4300006: MSH_Window_Side
+    4300008: MSH_Window_Front
+    4300010: MSH_Wall_Corner
+    4300012: MSH_Wall_Side
+    4300014: MSH_Wall_Front
+    4300016: MSH_Floor
+    4300018: MSH_Room_SingleDoor_Side
+    4300020: MSH_Room_Quad
+    4300022: MSH_Room_Double
+    4300024: MSH_Room_SingleDoor_Front
+    4300026: MSH_Room_DoubleDoor_Front
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

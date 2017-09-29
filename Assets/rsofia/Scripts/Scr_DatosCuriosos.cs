@@ -21,6 +21,10 @@ public class Scr_DatosCuriosos : MonoBehaviour {
         sceneManager.LoadSceneAfterSeconds(escenaACargar, segundosEnPantalla);
     }
 
+    /// <summary>
+    /// Toma un dato curioso aleatorio
+    /// </summary>
+    /// <returns>regresa el string del dato curioso</returns>
     string GetRandomText()
     {
         randomIndex = Random.Range(0, datosCuriosos.Length);
