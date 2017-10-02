@@ -8,6 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class N_Grid : MonoBehaviour
 {
-    //public GameObject obj;
+    public GameObject obj;
     public int idModule;
+
+    public N_Grid()
+    {
+        obj = null;
+        idModule = 0;
+    }
 }
