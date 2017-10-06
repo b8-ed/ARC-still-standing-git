@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class N_Grid : MonoBehaviour
+public class N_Grid
 {
     public GameObject obj;
     public int idModule;

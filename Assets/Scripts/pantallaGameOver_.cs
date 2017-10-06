@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class pantallaGameOver_ : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class pantallaGameOver_ : MonoBehaviour
         txtMensaje = gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.GetComponent<Text>();
         btnSalir = gameObject.transform.GetChild(0).gameObject.transform.GetChild(3).gameObject.GetComponent<Button>();
         btnSalir.gameObject.SetActive(false);
+        cargarPantalla();
     }
     /// <summary>
     /// Boton para realizar alguna accion para salir de la pantalla de GameOver
@@ -33,6 +35,7 @@ public class pantallaGameOver_ : MonoBehaviour
     public void botonSalir()
     {
         //Salir o algo
+        SceneManager.LoadScene("MainMenu");
     }
     /// <summary>
     /// Inicia la aparicion de la pantalla de Game over porcentual mente - ver corutina Fade
@@ -55,11 +58,11 @@ public class pantallaGameOver_ : MonoBehaviour
     /// <returns></returns>
     IEnumerator Fade()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         if (alpha < 1.0f)
         {
             imgFondo.color = new Color(imgFondo.color.r, imgFondo.color.g, imgFondo.color.b, alpha);
-            alpha+=0.1f;
+            alpha+=0.05f;
             StartCoroutine(Fade());
         }
         else
