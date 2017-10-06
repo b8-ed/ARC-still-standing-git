@@ -84,7 +84,7 @@ public class N_Base : MonoBehaviour
             for(int j = 0; j < (int)maxGridSize.y; j++)
             {
                 if(grid[i, j].obj != null)
-                    grid[i, j].obj.transform.position = new Vector3(i* ( moduleMeasure), 0, j* moduleMeasure);
+                    grid[i, j].obj.transform.position = new Vector3(i * ( moduleMeasure), 0, j * moduleMeasure);
             }
         }
     }
@@ -124,6 +124,14 @@ public class N_Base : MonoBehaviour
                 grid[i, j].obj = Instantiate(piezasModularesPrefab[index].gameObject, gridParent);
 
                 //tomar los tamanios de las figuras (grid size)
+                for(int r = 0; r < piezasModularesPrefab[index].gridLayout.Length; r++)
+                {
+                    for(int c = 0; c < piezasModularesPrefab[index].gridLayout[r].rowdata.Length; c++)
+                    {
+                        //piezasModularesPrefab[index].gridLayout[i].rowdata[j];
+                    }
+                }
+                
             }
         }
         
