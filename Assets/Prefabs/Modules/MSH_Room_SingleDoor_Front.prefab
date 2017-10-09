@@ -96,4 +96,4 @@ MonoBehaviour:
   isCorner: 0
   isWall: 0
   gridLayout:
-  - rowdata: 00000000
+  - rowdata: 01000000

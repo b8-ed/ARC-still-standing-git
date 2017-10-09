@@ -42,34 +42,31 @@ public class N_Base : MonoBehaviour
                     if (i == 0)
                         GetPrefab(i, j, true, true, 90);
                     else if (i == maxGridSize.x - 1) //lower left corner
-                        GetPrefab(i, j, true, true, 180);
+                        GetPrefab(i, j, true, true, 0);
                     else //wall left
-                    {
                         GetPrefab(i, j, false, true, 0);
-                        Debug.LogWarning("HELLO THERE " + i + " " + j);
-                    }
                 } //Up
                 else if (i == 0 && j > 0)
                 {
                     if (j == maxGridSize.y - 1) //upper right corner
-                        GetPrefab(i, j, true, true, 0);
+                        GetPrefab(i, j, true, true, 180);
                     else //wall up
-                        GetPrefab(i, j, false, true, 0);
+                        GetPrefab(i, j, false, true, 90);
                 }
                 //Right
                 else if(j == maxGridSize.y - 1)
                 {
                     if (i == 0 || i == maxGridSize.x - 1)
-                        GetPrefab(i, j, true, true, 0);
+                        GetPrefab(i, j, true, true, -90); //lower right corner
                     else
-                        GetPrefab(i, j, false, true, 0);
+                        GetPrefab(i, j, false, true, 180);
                 }//Wall Down
                 else if(i == maxGridSize.x - 1)
                 {
                     if(j == 0 || j == maxGridSize.y - 1)
-                        GetPrefab(i, j, true, true, 180);
+                        GetPrefab(i, j, true, true, 0);
                     else
-                        GetPrefab(i, j, false, true, 0);
+                        GetPrefab(i, j, false, true, -90);
 
                 } //Center stuff
                 else
@@ -106,10 +103,7 @@ public class N_Base : MonoBehaviour
                 print("index" + index);
                 // grid[i, j].idModule = id;
                 grid[i, j].obj = Instantiate(corners[index].gameObject, gridParent);
-                if(id == 12)
-                    grid[i, j].obj.transform.Rotate(new Vector3(0, 0, -_rotation));
-                else
-                    grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
+                grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
                 grid[i, j].idModule = id;
             }
             else if (_wall)
@@ -117,25 +111,29 @@ public class N_Base : MonoBehaviour
                 int index = Random.Range(0, walls.Length);
                 id = walls[index].id;
                 grid[i, j].idModule = id;
-                grid[i, j].obj = Instantiate(walls[index].gameObject, gridParent);           
+                grid[i, j].obj = Instantiate(walls[index].gameObject, gridParent);
+                grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
             }
             else
             {
+
+                print("MODEULE " + grid[i, j].idModule);
                 int index = Random.Range(0, piezasModularesPrefab.Length);
                 id = piezasModularesPrefab[index].id;
                 grid[i, j].idModule = id;
                 grid[i, j].obj = Instantiate(piezasModularesPrefab[index].gameObject, gridParent);
+                grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
 
                 //tomar los tamanios de las figuras (grid size)
-                for(int r = 0; r < piezasModularesPrefab[index].gridLayout.Length; r++)
+                for (int r = 0; r < piezasModularesPrefab[index].gridLayout.Length; r++)
                 {
                     for(int c = 0; c < piezasModularesPrefab[index].gridLayout[r].rowdata.Length; c++)
                     {
                         if(piezasModularesPrefab[index].gridLayout[r].rowdata[c] > 0)
                         {
                             grid[i, j].idModule = id;
-                        }
-                       
+                            print("HELLO THERE " + i + " " + j + "id " + id + " "+ piezasModularesPrefab[index].gridLayout.Length + " * " + piezasModularesPrefab[index].gridLayout[r].rowdata.Length);
+                        }                       
                     }
                 }
                 
