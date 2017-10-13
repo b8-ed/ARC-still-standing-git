@@ -100,7 +100,6 @@ public class N_Base : MonoBehaviour
             {
                 int index = Random.Range(0, corners.Length);
                 id = corners[index].id;
-                print("index" + index);
                 // grid[i, j].idModule = id;
                 grid[i, j].obj = Instantiate(corners[index].gameObject, gridParent);
                 grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
@@ -116,26 +115,79 @@ public class N_Base : MonoBehaviour
             }
             else
             {
-
-                print("MODEULE " + grid[i, j].idModule);
                 int index = Random.Range(0, piezasModularesPrefab.Length);
                 id = piezasModularesPrefab[index].id;
+                //Check if prefab's size is bigger than 1x1. if it is, fill the grid spaces with its id
+                int piezaI = piezasModularesPrefab[index].gridLayout.Length;
+                int piezaJ = piezasModularesPrefab[index].gridLayout[0].rowdata.Length;
+                int indiceGrid = piezaI;
+                bool facingHorizontal = false;
+                if (indiceGrid >= 0)
+                {
+                    //set as vertical
+                    int startGrid = i;
+                    float maxGrid = maxGridSize.x;
+                    //Flip for horizontal or vertical
+                    facingHorizontal = Random.Range(0, 100) >= 50 ? true : false;
+                    //set as horizontal
+                    if (facingHorizontal)
+                    {
+                        startGrid = j;
+                        maxGrid = maxGridSize.y;
+                        //indiceGrid = piezaJ;
+                    }
+                 
+                    //set the following pieces in grid to be for this prefab
+                    for (int r = 0; r < indiceGrid; r++)
+                    {
+                        if (startGrid < maxGrid)
+                        {
+                            if (facingHorizontal)
+                            {
+                                grid[i, startGrid].idModule = id;
+                                //si tiene mas de 2 lineas, ej. Cuadrado                                
+                                if (piezaI > 1) //THE ERROR IS SOMEWHERE HERE. 
+                                {
+                                    int otherGrid = i;
+                                    for (int o = 0; o < piezaI; o++)
+                                    {
+                                        grid[otherGrid, startGrid].idModule = id;
+                                        otherGrid++;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                grid[startGrid, j].idModule = id;
+                                //si tiene mas de 2 lineas, ej. Cuadrado
+                                if (piezaJ > 1)
+                                {
+                                    int otherGrid = j;
+                                    for (int o = 0; o < piezaJ; o++)
+                                    {
+                                        grid[startGrid, otherGrid].idModule = id;
+                                        otherGrid++;
+                                    }
+                                }
+                            }
+                            startGrid++;
+                        }
+                        else
+                            break;
+                            
+                    }
+                }
+
+                //Stairs special rotation && double room
+                if (!facingHorizontal && (id == 7 || id == 8 || id == 2)) //&& id != 4) //
+                {
+                    _rotation -= 90;
+
+                }
+
                 grid[i, j].idModule = id;
                 grid[i, j].obj = Instantiate(piezasModularesPrefab[index].gameObject, gridParent);
                 grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
-
-                //tomar los tamanios de las figuras (grid size)
-                for (int r = 0; r < piezasModularesPrefab[index].gridLayout.Length; r++)
-                {
-                    for(int c = 0; c < piezasModularesPrefab[index].gridLayout[r].rowdata.Length; c++)
-                    {
-                        if(piezasModularesPrefab[index].gridLayout[r].rowdata[c] > 0)
-                        {
-                            grid[i, j].idModule = id;
-                            print("HELLO THERE " + i + " " + j + "id " + id + " "+ piezasModularesPrefab[index].gridLayout.Length + " * " + piezasModularesPrefab[index].gridLayout[r].rowdata.Length);
-                        }                       
-                    }
-                }
                 
             }
         }

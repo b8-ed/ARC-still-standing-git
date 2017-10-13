@@ -140,7 +140,7 @@ MonoBehaviour:
   - {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}
   - {fileID: 114206587616391994, guid: 4d20ac91b5504824d8769b8d160f16e4, type: 2}
   - {fileID: 114288235163877484, guid: f17bc2ca4426fc741a4d137ad000250c, type: 2}
-  - {fileID: 114856520278869386, guid: 853f9490a0ed55e408255715fd550c47, type: 2}
+  - {fileID: 114922781442815598, guid: 853f9490a0ed55e408255715fd550c47, type: 2}
   - {fileID: 114262770886404652, guid: f59fa785c5df7764cbcf549ca32e1a0f, type: 2}
   - {fileID: 114360056159871368, guid: da2023355b87ebf41abcc4482313d63e, type: 2}
   - {fileID: 114602394944252182, guid: 421fc0e8c0518674d849f95d2250f706, type: 2}
@@ -258,7 +258,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 55
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
