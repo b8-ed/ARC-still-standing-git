@@ -17,6 +17,28 @@ public class N_Base : MonoBehaviour
 
     N_Grid[,] grid;
 
+    bool[] isEscapeDisplayed = { false, false}; //cannot be more than 2 escape
+    bool[] isStairsDisplayed = { false, false };
+
+    //id of prefab modules
+    enum Modules
+    {
+        _00_FLOOR,
+        _01_DOUBLE,
+        _02_DOUBLE_DOOR,
+        _03_QUAD,
+        _04_SINGLEDOOR,
+        _05_SINGLEDOOR_SIDE,
+        _06_BASEMENT,
+        _07_ESCAPE,
+        _08_WALL_CORNER,
+        _09_WALL_FRONT,
+        _10_WALL_SIDE,
+        _11_WINDOW_CORNER,
+        _12_WINDOW__FRONT,
+        _13_WINDOW_SIDE
+    }
+
     private void Start()
     {
         grid = new N_Grid[(int)maxGridSize.x, (int)maxGridSize.y];
@@ -115,11 +137,51 @@ public class N_Base : MonoBehaviour
             }
             else
             {
-                int index = Random.Range(0, piezasModularesPrefab.Length);
+                int index = 0;
+                bool exit = false;
+                do
+                {
+                    index = Random.Range(0, piezasModularesPrefab.Length);
+                    //Limitar el numero de cuartos de escape
+                    if (index == (int)Modules._07_ESCAPE)
+                    {
+                        for (int e = 0; e < isEscapeDisplayed.Length; e++)
+                        {
+                            if (!isEscapeDisplayed[e])
+                            {
+                                isEscapeDisplayed[e] = true;
+                                exit = true;
+                                break;
+                            }
+                        }
+                    }
+                    else if (index == (int)Modules._06_BASEMENT)
+                    {
+                        for (int e = 0; e < isStairsDisplayed.Length; e++)
+                        {
+                            if (!isStairsDisplayed[e])
+                            {
+                                isStairsDisplayed[e] = true;
+                                exit = true;
+                                break;
+                            }
+                        }
+                    } //No dejar que el quad quede a la orilla por sus dobles puertas (no puertas en vez de paredes)s
+                    else if (index == (int)Modules._03_QUAD && j >= maxGridSize.y - 3)
+                    {
+                        exit = false;
+                        print("Quad j " + j);
+                    }
+                    else
+                        exit = true;
+                   
+                } while (!exit);
+                
+
                 id = piezasModularesPrefab[index].id;
                 //Check if prefab's size is bigger than 1x1. if it is, fill the grid spaces with its id
                 int piezaI = piezasModularesPrefab[index].gridLayout.Length;
-                int piezaJ = piezasModularesPrefab[index].gridLayout[0].rowdata.Length;
+                int piezaJ = piezaI; //piezasModularesPrefab[index].gridLayout[0].rowdata.Length;
                 int indiceGrid = piezaI;
                 bool facingHorizontal = false;
                 if (indiceGrid >= 0)
@@ -179,7 +241,7 @@ public class N_Base : MonoBehaviour
                 }
 
                 //Stairs special rotation && double room
-                if (!facingHorizontal && (id == 7 || id == 8 || id == 2)) //&& id != 4) //
+                if (!facingHorizontal && (id == (int)Modules._07_ESCAPE || id == (int)Modules._08_WALL_CORNER || id == (int)Modules._02_DOUBLE_DOOR)) //&& id != 4) //
                 {
                     _rotation -= 90;
 
