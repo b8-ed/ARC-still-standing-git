@@ -126,6 +126,7 @@ public class N_Base : MonoBehaviour
                 grid[i, j].obj = Instantiate(corners[index].gameObject, gridParent);
                 grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
                 grid[i, j].idModule = id;
+                corners[index].isAtCorner = true;
             }
             else if (_wall)
             {
@@ -142,8 +143,12 @@ public class N_Base : MonoBehaviour
                 do
                 {
                     index = Random.Range(0, piezasModularesPrefab.Length);
+                    if(grid[i, j].idModule != 0)
+                    {
+                        exit = false;
+                    }
                     //Limitar el numero de cuartos de escape
-                    if (index == (int)Modules._07_ESCAPE)
+                    else if (index == (int)Modules._07_ESCAPE)
                     {
                         for (int e = 0; e < isEscapeDisplayed.Length; e++)
                         {
@@ -170,7 +175,28 @@ public class N_Base : MonoBehaviour
                     else if (index == (int)Modules._03_QUAD && j >= maxGridSize.y - 3)
                     {
                         exit = false;
-                        print("Quad j " + j);
+                        //print("Quad j " + j);
+                    }//no mas de dos cuartos juntos
+                    else if(index == (int)Modules._05_SINGLEDOOR_SIDE)
+                    {
+                        if(j > 0)
+                            if(grid[i, j-1].idModule == (int)Modules._05_SINGLEDOOR_SIDE)
+                            {
+                                exit = false;
+                            }
+                        if(i > 0)
+                            if (grid[i - 1, j].idModule == (int)Modules._06_BASEMENT || grid[i - 1, j].idModule == (int)Modules._07_ESCAPE)
+                            {
+                                exit = false;
+                            }
+                    }
+                    else if(index == (int)Modules._01_DOUBLE)
+                    {
+                        if (j > 0 && j < maxGridSize.y)
+                            if (grid[i, j + 1].idModule != 0)
+                            {
+                                exit = false;
+                            }
                     }
                     else
                         exit = true;
@@ -228,6 +254,8 @@ public class N_Base : MonoBehaviour
                                     for (int o = 0; o < piezaJ; o++)
                                     {
                                         grid[startGrid, otherGrid].idModule = id;
+                                        grid[startGrid, otherGrid].idModule = id;
+                                        print("Grid vertical " + startGrid + " " + otherGrid + " at " + i + " " + j );
                                         otherGrid++;
                                     }
                                 }

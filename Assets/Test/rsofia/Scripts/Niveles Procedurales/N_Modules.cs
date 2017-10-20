@@ -19,4 +19,8 @@ public class N_Modules : MonoBehaviour
     public bool isWall;
     [Header("Grid Size")]
     public Row[] gridLayout;
+    [HideInInspector]
+    public int timesSpinned = 0;
+    [HideInInspector]
+    public bool isAtCorner = false;
 }
