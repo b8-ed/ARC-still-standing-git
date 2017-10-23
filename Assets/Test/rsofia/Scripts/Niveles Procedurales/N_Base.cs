@@ -206,79 +206,100 @@ public class N_Base : MonoBehaviour
 
                 id = piezasModularesPrefab[index].id;
                 //Check if prefab's size is bigger than 1x1. if it is, fill the grid spaces with its id
-                int piezaI = piezasModularesPrefab[index].gridLayout.Length;
-                int piezaJ = piezaI; //piezasModularesPrefab[index].gridLayout[0].rowdata.Length;
-                int indiceGrid = piezaI;
+                int lengthRow = piezasModularesPrefab[index].gridLayout.Length;
                 bool facingHorizontal = false;
-                if (indiceGrid >= 0)
+                if (lengthRow >= 0)
                 {
                     //set as vertical
-                    int startGrid = i;
-                    float maxGrid = maxGridSize.x;
+                    int startI = i;
+                    int startJ = j;
                     //Flip for horizontal or vertical
                     facingHorizontal = Random.Range(0, 100) >= 50 ? true : false;
-                    //set as horizontal
-                    if (facingHorizontal)
-                    {
-                        startGrid = j;
-                        maxGrid = maxGridSize.y;
-                        //indiceGrid = piezaJ;
-                    }
                  
                     //set the following pieces in grid to be for this prefab
-                    for (int r = 0; r < indiceGrid; r++)
+                    for(int c = 0; c < piezasModularesPrefab[index].gridLayout[0].rowdata.Length; c++)
                     {
-                        if (startGrid < maxGrid)
-                        {
-                            if (facingHorizontal)
-                            {
-                                grid[i, startGrid].idModule = id;
-                                //si tiene mas de 2 lineas, ej. Cuadrado                                
-                                if (piezaI > 1) //THE ERROR IS SOMEWHERE HERE. 
-                                {
-                                    int otherGrid = i;
-                                    for (int o = 0; o < piezaI; o++)
-                                    {
-                                        grid[otherGrid, startGrid].idModule = id;
-                                        otherGrid++;
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                grid[startGrid, j].idModule = id;
-                                //si tiene mas de 2 lineas, ej. Cuadrado
-                                if (piezaJ > 1)
-                                {
-                                    int otherGrid = j;
-                                    for (int o = 0; o < piezaJ; o++)
-                                    {
-                                        grid[startGrid, otherGrid].idModule = id;
-                                        grid[startGrid, otherGrid].idModule = id;
-                                        print("Grid vertical " + startGrid + " " + otherGrid + " at " + i + " " + j );
-                                        otherGrid++;
-                                    }
-                                }
-                            }
-                            startGrid++;
+                      grid[startI, startJ].idModule = id;
+
+                        if (facingHorizontal)
+                        {                               
+                            startJ++;
+                            if (startJ >= maxGridSize.y)
+                               break;
+
                         }
                         else
-                            break;
-                            
+                        {
+                            startI++;
+                            if (startI >= maxGridSize.x)
+                               break;
+                        }
+                    }
+
+                    if(id == 4)
+                    {
+                        grid[i, j].idModule = id;
+                        grid[i + 1, j].idModule = id;
+                        grid[i, j+1].idModule = id;
+                        grid[i + 1, j + 1].idModule = id;
                     }
                 }
 
                 //Stairs special rotation && double room
-                if (!facingHorizontal && (id == (int)Modules._07_ESCAPE || id == (int)Modules._08_WALL_CORNER || id == (int)Modules._02_DOUBLE_DOOR)) //&& id != 4) //
+                if (!facingHorizontal && (id == (int)Modules._08_WALL_CORNER || id == (int)Modules._02_DOUBLE_DOOR)) //&& id != 4) //
                 {
                     _rotation -= 90;
 
                 }
 
+
                 grid[i, j].idModule = id;
                 grid[i, j].obj = Instantiate(piezasModularesPrefab[index].gameObject, gridParent);
-                grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
-                
+                //grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
+
+
+                if (facingHorizontal)
+                {
+                    switch (id)
+                    {
+                        case (int)Modules._07_ESCAPE:
+                            {
+
+                                grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 270);
+
+                            }
+                            break;
+                        case (int)Modules._06_BASEMENT:
+                            {
+
+                                grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 90);
+                            }
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (id)
+                    {
+                        case (int)Modules._07_ESCAPE:
+                            {
+
+                                grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 0);
+
+                            }
+                            break;
+                        case (int)Modules._06_BASEMENT:
+                            {
+
+                                grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 0);
+                            }
+                            break;
+                    }
+                }
+
+
+
+
             }
         }
         
