@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-    [RequireComponent(typeof (ThirdPersonCharacter))]
+    //[RequireComponent(typeof (ThirdPersonCharacter))]
     public class ThirdPersonUserControl : MonoBehaviour
     {
-        private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
-        private Transform m_Cam;                  // A reference to the main camera in the scenes transform
+        public ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
+		private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
@@ -28,16 +28,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
 
             // get the third person character ( this should never be null due to require component )
-            m_Character = GetComponent<ThirdPersonCharacter>();
+            //m_Character = GetComponent<ThirdPersonCharacter>();
         }
 
 
-        private void Update()
+        private void LateUpdate()
         {
-            if (!m_Jump)
-            {
-				//m_Jump = Input.GetButtonDown("Jump");
-            }
+			m_Cam.transform.parent.position = m_Character.transform.position;
         }
 
 
