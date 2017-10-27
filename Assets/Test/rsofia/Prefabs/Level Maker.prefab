@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1614271378695024}
+  m_IsPrefabParent: 1
+--- !u!1 &1131043900210930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4003353476161104}
+  m_Layer: 0
+  m_Name: Grid Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1614271378695024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4162282325277390}
+  - component: {fileID: 114618907655063316}
+  m_Layer: 0
+  m_Name: Level Maker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4003353476161104
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131043900210930}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4162282325277390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4162282325277390
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614271378695024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4003353476161104}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114618907655063316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614271378695024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cef74048587b4e438cfa12779251efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridParent: {fileID: 4003353476161104}
+  piezasModularesPrefab:
+  - {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}
+  - {fileID: 114206587616391994, guid: 4d20ac91b5504824d8769b8d160f16e4, type: 2}
+  - {fileID: 114922781442815598, guid: 853f9490a0ed55e408255715fd550c47, type: 2}
+  - {fileID: 114262770886404652, guid: f59fa785c5df7764cbcf549ca32e1a0f, type: 2}
+  - {fileID: 114360056159871368, guid: da2023355b87ebf41abcc4482313d63e, type: 2}
+  - {fileID: 114602394944252182, guid: 421fc0e8c0518674d849f95d2250f706, type: 2}
+  - {fileID: 114493030180438498, guid: ff5baef353ba7a444a54999fa46ce512, type: 2}
+  - {fileID: 114913423267415530, guid: c1ab0ca3d0dbc70429586f7f652fb3bd, type: 2}
+  - {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}
+  - {fileID: 114692417774944294, guid: 3e0228072c59adf46bea6df8175552e3, type: 2}
+  - {fileID: 114685443736652444, guid: 61502a4791c442143b4f6fff57982944, type: 2}
+  - {fileID: 114231280741160220, guid: f1ed0afb4a97284418ab86db2dc62ead, type: 2}
+  - {fileID: 114773255883749620, guid: e707e1659febbd647b0573ab461d2720, type: 2}
+  - {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}
+  corners:
+  - {fileID: 114913423267415530, guid: c1ab0ca3d0dbc70429586f7f652fb3bd, type: 2}
+  - {fileID: 114685443736652444, guid: 61502a4791c442143b4f6fff57982944, type: 2}
+  walls:
+  - {fileID: 114138832684379142, guid: facb553a1488377458bb36bb69a0c005, type: 2}
+  - {fileID: 114692417774944294, guid: 3e0228072c59adf46bea6df8175552e3, type: 2}
+  - {fileID: 114231280741160220, guid: f1ed0afb4a97284418ab86db2dc62ead, type: 2}
+  - {fileID: 114773255883749620, guid: e707e1659febbd647b0573ab461d2720, type: 2}
+  elevador: {fileID: 114288235163877484, guid: f17bc2ca4426fc741a4d137ad000250c, type: 2}

@@ -12,6 +12,7 @@ public class N_Base : MonoBehaviour
     public N_Modules[] piezasModularesPrefab;
     public N_Modules[] corners;
     public N_Modules[] walls;
+    public N_Modules elevador;
     Vector2 maxGridSize = new Vector2(10, 15); //en metros
     int moduleMeasure = 4;
 
@@ -19,20 +20,20 @@ public class N_Base : MonoBehaviour
 
     bool[] isEscapeDisplayed = { false, false}; //cannot be more than 2 escape
     bool[] isStairsDisplayed = { false, false };
+    bool isElevadorDisplayed = false;
 
     //id of prefab modules
     enum Modules
     {
-        _00_FLOOR,
+        _00_FLOOR = 0,
         _01_DOUBLE,
-        _02_DOUBLE_DOOR,
         _03_QUAD,
         _04_SINGLEDOOR,
         _05_SINGLEDOOR_SIDE,
         _06_BASEMENT,
         _07_ESCAPE,
         _08_WALL_CORNER,
-        _09_WALL_FRONT,
+        _09_FLOOR,
         _10_WALL_SIDE,
         _11_WINDOW_CORNER,
         _12_WINDOW__FRONT,
@@ -132,8 +133,19 @@ public class N_Base : MonoBehaviour
             {
                 int index = Random.Range(0, walls.Length);
                 id = walls[index].id;
+                N_Modules obj = walls[index]; 
+                //ELEVADOR
+                if (isElevadorDisplayed == false && i == maxGridSize.x - 1 && j > 0)
+                {
+                    id = elevador.id;
+                    obj = elevador;
+                    obj.transform.localEulerAngles = new Vector3(-90, 0, 90);
+                    _rotation = 0;
+                    isElevadorDisplayed = true;
+                }
+               
                 grid[i, j].idModule = id;
-                grid[i, j].obj = Instantiate(walls[index].gameObject, gridParent);
+                grid[i, j].obj = Instantiate(obj.gameObject, gridParent);
                 grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
             }
             else
@@ -154,8 +166,16 @@ public class N_Base : MonoBehaviour
                         {
                             if (!isEscapeDisplayed[e])
                             {
-                                isEscapeDisplayed[e] = true;
-                                exit = true;
+                                if (i + 1 == 0 && j + 1 == 0)
+                                {
+                                    isEscapeDisplayed[e] = true;
+                                    exit = true;                                   
+                                }
+                                else
+                                {
+                                    exit = false;
+                                }
+
                                 break;
                             }
                         }
@@ -172,9 +192,19 @@ public class N_Base : MonoBehaviour
                             }
                         }
                     } //No dejar que el quad quede a la orilla por sus dobles puertas (no puertas en vez de paredes)s
-                    else if (index == (int)Modules._03_QUAD && j >= maxGridSize.y - 3)
+                    else if (index == (int)Modules._03_QUAD)
                     {
-                        exit = false;
+                        if (j >= 10)
+                        {
+                           
+                            print("EN ORILLA " + i + " " + j);
+                            exit = false;
+                        }
+                        if (i + 1 != 0)
+                        {
+                            exit = false;
+                        }
+
                         //print("Quad j " + j);
                     }//no mas de dos cuartos juntos
                     else if(index == (int)Modules._05_SINGLEDOOR_SIDE)
@@ -246,10 +276,9 @@ public class N_Base : MonoBehaviour
                 }
 
                 //Stairs special rotation && double room
-                if (!facingHorizontal && (id == (int)Modules._08_WALL_CORNER || id == (int)Modules._02_DOUBLE_DOOR)) //&& id != 4) //
+                if (!facingHorizontal && (index == (int)Modules._08_WALL_CORNER))// || index == (int)Modules._02_DOUBLE_DOOR)) //&& id != 4) //
                 {
                     _rotation -= 90;
-
                 }
 
 
@@ -260,26 +289,27 @@ public class N_Base : MonoBehaviour
 
                 if (facingHorizontal)
                 {
-                    switch (id)
+                    switch (index)
                     {
                         case (int)Modules._07_ESCAPE:
                             {
 
                                 grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 270);
-
+                                //grid[i, j].obj.GetComponentInChildren<Renderer>().material.color = Color.blue;
                             }
                             break;
                         case (int)Modules._06_BASEMENT:
                             {
 
-                                grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 90);
+                                grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, -90);
+                                //grid[i, j].obj.GetComponentInChildren<Renderer>().material.color = Color.yellow;
                             }
                             break;
                     }
                 }
                 else
                 {
-                    switch (id)
+                    switch (index)
                     {
                         case (int)Modules._07_ESCAPE:
                             {
@@ -292,19 +322,13 @@ public class N_Base : MonoBehaviour
                             {
 
                                 grid[i, j].obj.transform.localEulerAngles = new Vector3(grid[i, j].obj.transform.localEulerAngles.x, grid[i, j].obj.transform.localEulerAngles.y, 0);
+                                //grid[i, j].obj.GetComponentInChildren<Renderer>().material.color = Color.black;
                             }
                             break;
                     }
-                }
-
-
-
-
+                }                
             }
         }
-        
-
-        //return id;
     }
 
     void PrintGrid()

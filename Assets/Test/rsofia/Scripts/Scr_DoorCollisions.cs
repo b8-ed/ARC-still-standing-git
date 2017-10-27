@@ -13,18 +13,12 @@ public class Scr_DoorCollisions : MonoBehaviour
     private void Awake()
     {
         parent = transform.parent.gameObject;
-        //print(parent.name);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag != "DoorFrame" && other.gameObject != parent)
-        {
-            //if(other.gameObject.GetComponent<Renderer>() != null)
-            //    other.gameObject.GetComponent<Renderer>().material.color = Color.red;
-            //else
-            //    other.gameObject.GetComponentInChildren<Renderer>().material.color = Color.red;
-            
+        {            
             //rotar - 90
             if (!parent.GetComponent<N_Modules>().isCorner)
             {
@@ -51,14 +45,11 @@ public class Scr_DoorCollisions : MonoBehaviour
                         }
                         else if(parent.GetComponent<N_Modules>().id == 7 || parent.GetComponent<N_Modules>().id == 8)
                         {
-                            //parent.GetComponentInChildren<Renderer>().material.color = Color.green;
                             if(other.GetComponent<N_Modules>() != null)
                             {
                                 if (other.GetComponent<N_Modules>().id != 7 && other.GetComponent<N_Modules>().id != 8)
                                 {
                                     other.GetComponent<N_Modules>().transform.Rotate(new Vector3(0.0f, 0.0f, -90.0f));
-                                    //other.GetComponentInChildren<Renderer>().material.color = Color.red;
-                                    print("OTHER " + other.name);
                                 }
                             }
                         }
@@ -66,10 +57,7 @@ public class Scr_DoorCollisions : MonoBehaviour
                     else
                         parent.transform.Rotate(new Vector3(0.0f, 0.0f, -90.0f));
                     parent.GetComponent<N_Modules>().timesSpinned++;
-                    //parent.GetComponentInChildren<Renderer>().material.color = Color.blue;
                 }
-                //else
-                //    parent.GetComponentInChildren<Renderer>().material.color = Color.cyan;
             }
 
                 
