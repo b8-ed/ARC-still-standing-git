@@ -18,11 +18,10 @@ public class scr_Camera : MonoBehaviour {
 		currentRotation.x += Input.GetAxis ("Mouse X") * sensitivity;
 		currentRotation.y += Input.GetAxis ("Mouse Y") * sensitivity;
 
-		if (currentRotation.x==0f)
-			transform.LookAt (Target.transform.position);
-
 		currentRotation.x = Mathf.Repeat (currentRotation.x, 360);
-		
-		transform.parent.rotation = Quaternion.Euler (0f, currentRotation.x, 0f);
+		currentRotation.y = Mathf.Clamp(currentRotation.y,-20,30);
+
+		transform.parent.rotation = Quaternion.Euler (-currentRotation.y, currentRotation.x, 0f);
+		Debug.Log (currentRotation.y);
 	}
 }
