@@ -214,6 +214,9 @@ MonoBehaviour:
   - rowdata: 01000000
   timesSpinned: 0
   isAtCorner: 1
+  damagedVersion:
+  - {fileID: 1767973631483888, guid: 607f67e2beaf1024ca62b4060591f2bb, type: 2}
+  safeVersion: []
 --- !u!114 &114787307532119118
 MonoBehaviour:
   m_ObjectHideFlags: 1

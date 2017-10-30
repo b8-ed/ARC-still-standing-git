@@ -13,10 +13,12 @@ public class N_Base : MonoBehaviour
     public N_Modules[] corners;
     public N_Modules[] walls;
     public N_Modules elevador;
-    Vector2 maxGridSize = new Vector2(10, 15); //en metros
+    [HideInInspector]
+    public Vector2 maxGridSize = new Vector2(10, 15); //en metros
     int moduleMeasure = 4;
 
-    N_Grid[,] grid;
+    [HideInInspector]
+    public N_Grid[,] grid;
 
     bool[] isEscapeDisplayed = { false, false}; //cannot be more than 2 escape
     bool[] isStairsDisplayed = { false, false };

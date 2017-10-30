@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4162282325277390}
   - component: {fileID: 114618907655063316}
+  - component: {fileID: 114984158918301122}
   m_Layer: 0
   m_Name: Level Maker
   m_TagString: Untagged
@@ -105,3 +106,15 @@ MonoBehaviour:
   - {fileID: 114231280741160220, guid: f1ed0afb4a97284418ab86db2dc62ead, type: 2}
   - {fileID: 114773255883749620, guid: e707e1659febbd647b0573ab461d2720, type: 2}
   elevador: {fileID: 114288235163877484, guid: f17bc2ca4426fc741a4d137ad000250c, type: 2}
+--- !u!114 &114984158918301122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614271378695024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c88756febc9154f9801dca3af7c8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modules: {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}

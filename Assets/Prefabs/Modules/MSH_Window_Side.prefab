@@ -140,3 +140,8 @@ MonoBehaviour:
   isWall: 1
   gridLayout:
   - rowdata: 01000000
+  timesSpinned: 0
+  isAtCorner: 0
+  damagedVersion:
+  - {fileID: 1770414941200218, guid: b15a841b6457d494e8c5b797e09999d0, type: 2}
+  safeVersion: []

@@ -23,4 +23,6 @@ public class N_Modules : MonoBehaviour
     public int timesSpinned = 0;
     [HideInInspector]
     public bool isAtCorner = false;
+    public GameObject[] damagedVersion;
+    public GameObject[] safeVersion;
 }

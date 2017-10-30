@@ -110,3 +110,10 @@ MonoBehaviour:
   isWall: 1
   gridLayout:
   - rowdata: 01000000
+  timesSpinned: 0
+  isAtCorner: 0
+  damagedVersion:
+  - {fileID: 1634155384216220, guid: 1a2a70c2e5ea89648966f08862e20631, type: 2}
+  - {fileID: 1456112122780840, guid: 373e6c54065ab3f428803a84883e7e6c, type: 2}
+  safeVersion:
+  - {fileID: 1781129212419028, guid: 1303677f57579b647a7f0796454d6b1b, type: 2}
