@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4133783988248458}
+  - component: {fileID: 65001888297641366}
   m_Layer: 0
   m_Name: MSH_Room_Double_Damaged_03
   m_TagString: Untagged
@@ -297,6 +298,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &65001888297641366
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243619471293256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.91, y: 4, z: 0.2}
+  m_Center: {x: 2.08, y: 0, z: -0.15}
 --- !u!65 &65004522297843354
 BoxCollider:
   m_ObjectHideFlags: 1

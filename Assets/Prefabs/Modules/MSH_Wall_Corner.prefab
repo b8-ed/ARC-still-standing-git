@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114913423267415530}
   - component: {fileID: 65087212150289774}
   - component: {fileID: 65870170851856888}
+  - component: {fileID: 65046732893441146}
   m_Layer: 0
   m_Name: MSH_Wall_Corner
   m_TagString: Untagged
@@ -130,6 +131,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &65046732893441146
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306997141701452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4.0000014, z: 0.3}
+  m_Center: {x: 0, y: 0, z: -0.12}
 --- !u!65 &65087212150289774
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -195,3 +208,5 @@ MonoBehaviour:
   - rowdata: 01000000
   timesSpinned: 0
   isAtCorner: 1
+  damagedVersion: []
+  safeVersion: []

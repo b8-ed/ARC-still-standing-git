@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4776392696395580}
   - component: {fileID: 33592922770831256}
   - component: {fileID: 23701954629283416}
+  - component: {fileID: 65029902922497404}
   m_Layer: 0
   m_Name: MSH_Room_SingleDoor_Front_Damaged_03
   m_TagString: Untagged
@@ -291,3 +292,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693990264640424}
   m_Mesh: {fileID: 4300000, guid: b1afd787417ad5d49a04c75b12aa3617, type: 3}
+--- !u!65 &65029902922497404
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693990264640424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 3.5, z: 0.4}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -104,6 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4676713697492636}
+  - component: {fileID: 65664068055451018}
   m_Layer: 0
   m_Name: MSH_Room_Quad_Damaged_01
   m_TagString: Untagged
@@ -392,3 +393,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1616817606166810}
   m_Mesh: {fileID: 4300004, guid: c05b6e1b0153ade4b89990ad53d1991d, type: 3}
+--- !u!65 &65664068055451018
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853141163227990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.31, y: 7.44, z: 0.4}
+  m_Center: {x: 1.84, y: -1.96, z: -0.14}

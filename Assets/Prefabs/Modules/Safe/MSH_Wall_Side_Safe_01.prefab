@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4129867575433020}
   - component: {fileID: 114512546605036410}
+  - component: {fileID: 65675988907386786}
   m_Layer: 0
   m_Name: MSH_Wall_Side_Safe_01
   m_TagString: Untagged
@@ -110,6 +111,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536956790497698}
   m_Mesh: {fileID: 4300000, guid: dc6bac8a187f5bb4d932029023175aff, type: 3}
+--- !u!65 &65675988907386786
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042466800076314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4.0000014, z: 0.3}
+  m_Center: {x: 0, y: 0, z: -0.12}
 --- !u!114 &114512546605036410
 MonoBehaviour:
   m_ObjectHideFlags: 1

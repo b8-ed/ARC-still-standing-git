@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 4313058671297618}
   - component: {fileID: 65503474987518932}
   - component: {fileID: 114360056159871368}
+  - component: {fileID: 65267999839255042}
   m_Layer: 0
   m_Name: MSH_Room_SingleDoor_Side
   m_TagString: Untagged
@@ -310,6 +311,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65267999839255042
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982142020408066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 0.4, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65503474987518932
 BoxCollider:

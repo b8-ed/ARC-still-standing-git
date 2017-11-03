@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4516909465462868}
   - component: {fileID: 114206587616391994}
+  - component: {fileID: 65222285504120678}
   m_Layer: 0
   m_Name: MSH_Room_Double
   m_TagString: Untagged
@@ -339,6 +340,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65222285504120678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310928651951872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.91, y: 4, z: 0.2}
+  m_Center: {x: 2.08, y: 0, z: -0.15}
 --- !u!114 &114206587616391994
 MonoBehaviour:
   m_ObjectHideFlags: 1

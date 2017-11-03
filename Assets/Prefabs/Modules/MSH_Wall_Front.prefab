@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23752576897549206}
   - component: {fileID: 114138832684379142}
   - component: {fileID: 65493340086421222}
+  - component: {fileID: 65909854257243232}
   m_Layer: 0
   m_Name: MSH_Wall_Front
   m_TagString: Untagged
@@ -94,6 +95,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 0.62, z: 3.2999992}
   m_Center: {x: 0, y: 1.83, z: 1.3499997}
+--- !u!65 &65909854257243232
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097289146121204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4.0000014, z: 0.3}
+  m_Center: {x: 0, y: 0, z: -0.12}
 --- !u!114 &114138832684379142
 MonoBehaviour:
   m_ObjectHideFlags: 1
