@@ -199,7 +199,7 @@ public class N_Base : MonoBehaviour
                         if (j >= 10)
                         {
                            
-                            print("EN ORILLA " + i + " " + j);
+                            //print("EN ORILLA " + i + " " + j);
                             exit = false;
                         }
                         if (i + 1 != 0)
