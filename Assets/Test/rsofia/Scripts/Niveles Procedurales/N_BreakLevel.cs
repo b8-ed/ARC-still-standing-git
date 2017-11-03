@@ -14,6 +14,13 @@ public class N_BreakLevel : MonoBehaviour
     private void Start()
     {
         //sortModulesById();
+        StartCoroutine(Break());
+    }
+
+    IEnumerator Break()
+    {
+        yield return new WaitForSeconds(3);
+        Earthquake();
     }
 
     public void Earthquake()
@@ -33,26 +40,26 @@ public class N_BreakLevel : MonoBehaviour
                     if (randDmg < 70)
                     {
                         int chosen = Random.Range(0, allModules[index].damagedVersion.Length);
-
-                        Quaternion rotation = b.grid[i, j].obj.transform.rotation;
-                        Vector3 position = b.grid[i, j].obj.transform.position;
-                        DestroyObject(b.grid[i, j].obj);
-                        GameObject replaced = Instantiate(allModules[index].damagedVersion[chosen], b.gridParent);
-                        replaced.transform.rotation = rotation;
-                        replaced.transform.position = position;
+                        SwapRooms(allModules[index].damagedVersion[chosen], b.grid[i, j].obj.transform.rotation, b.grid[i, j].obj.transform.position, i, j);                       
                     }
                     else if (allModules[index].safeVersion.Length > 0) //Not every damage has a safe version, check that it does
                     {
                         //Safe but Destroyed
-                        for (int d = 0; d < allModules[b.grid[i, j].idModule - 1].safeVersion.Length; d++)
-                        {
-
-                        }
+                        int chosen = Random.Range(0, allModules[index].safeVersion.Length);
+                        SwapRooms(allModules[index].safeVersion[chosen], b.grid[i, j].obj.transform.rotation, b.grid[i, j].obj.transform.position, i, j);
                     }
                 }
                
             }
         }
+    }
+
+    void SwapRooms(GameObject obj, Quaternion rotation, Vector3 position, int i, int j)
+    {
+        DestroyObject(b.grid[i, j].obj);
+        GameObject replaced = Instantiate(obj, b.gridParent);
+        replaced.transform.rotation = rotation;
+        replaced.transform.position = position;
     }
 
     void swapValues(N_Modules a, N_Modules b)
