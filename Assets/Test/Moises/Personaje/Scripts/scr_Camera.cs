@@ -22,6 +22,6 @@ public class scr_Camera : MonoBehaviour {
 		currentRotation.y = Mathf.Clamp(currentRotation.y,-20,30);
 
 		transform.parent.rotation = Quaternion.Euler (-currentRotation.y, currentRotation.x, 0f);
-		Debug.Log (currentRotation.y);
+		//Debug.Log (currentRotation.y);
 	}
 }
