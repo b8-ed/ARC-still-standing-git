@@ -283,6 +283,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7de43f2da685c942b99af372cce2c58, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &527189072 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114809036282276250, guid: e7de43f2da685c942b99af372cce2c58,
+    type: 2}
+  m_PrefabInternal: {fileID: 527189071}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &556259530 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4077901016560556, guid: 09578922bcee3844b922df1c51619fbd,
@@ -675,6 +681,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49f0c1fddb18aff409790d106b67b300, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &885242838 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114379835436256030, guid: 49f0c1fddb18aff409790d106b67b300,
+    type: 2}
+  m_PrefabInternal: {fileID: 885242837}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1019544766
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +739,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 649875534}
     m_Modifications:
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: curiousFacts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: datosCuriosos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4077901016560556, guid: 09578922bcee3844b922df1c51619fbd, type: 2}
       propertyPath: m_LocalPosition.x
       value: -400
@@ -789,7 +811,7 @@ Prefab:
     - target: {fileID: 114347184525803784, guid: 09578922bcee3844b922df1c51619fbd,
         type: 2}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 43
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 114347184525803784, guid: 09578922bcee3844b922df1c51619fbd,
         type: 2}
@@ -836,6 +858,50 @@ Prefab:
         type: 2}
       propertyPath: m_textInfo.spaceCount
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: datosCuriosos.Array.data[1]
+      value: "El terremoto m\xE1s fuerte de la historia se dio en Chile el 22 de amyo
+        de 1960. Tuvo una magnitud de 9.5 grados en la escala de Richter. Murieron
+        <b>1,655 personas</b>, <b>3,000</b> m\xE1s resultaron heridas y m\xE1s de
+        <b>2 millones</b> perdieron sus hogares. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: datosCuriosos.Array.data[2]
+      value: "El <i>movimiento s\xEDsmico </i> se propaga mediante ondas el\xE1sticas
+        (similares a las del sonido) a partir del hipocentro."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: datosCuriosos.Array.data[0]
+      value: "Los tres pa\xEDses con <color #BC0000FF>m\xE1s terremotos</color>  en
+        el mundo son Chile, Indonesia y Jap\xF3n."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: curiousFacts.Array.data[0]
+      value: 'The three countries with the <color #BC0000FF>most earthquakes</color>
+        each year in the world are Chile, Indonesia and Japan. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: curiousFacts.Array.data[1]
+      value: The strongest earthquake in history was on May 22nd 1960 in Chile. It
+        had a magnitude of 9.5 degrees in the Richter scale. <b>1,655</b> people died,
+        other <b>3,000</b> were injured and more than <b>2 million</b> lost their
+        homes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114347184525803784, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114347184525803784, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: m_fontSizeBase
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09578922bcee3844b922df1c51619fbd, type: 2}
@@ -902,6 +968,123 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1674842970
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: enVersion.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: spaVersion.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: txtToChange.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: enVersion.Array.data[2]
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: enVersion.Array.data[3]
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: enVersion.Array.data[4]
+      value: Donate
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: spaVersion.Array.data[2]
+      value: Jugar
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: spaVersion.Array.data[3]
+      value: Salir
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: spaVersion.Array.data[4]
+      value: Donar
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: txtToChange.Array.data[0]
+      value: 
+      objectReference: {fileID: 527189072}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: txtToChange.Array.data[1]
+      value: 
+      objectReference: {fileID: 885242838}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: enVersion.Array.data[0]
+      value: Curious Facts
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: enVersion.Array.data[1]
+      value: Did you know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: spaVersion.Array.data[1]
+      value: "\xBFSab\xEDas que...?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+        type: 2}
+      propertyPath: spaVersion.Array.data[0]
+      value: Datos Curiosos
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1706391123
 Prefab:
   m_ObjectHideFlags: 0

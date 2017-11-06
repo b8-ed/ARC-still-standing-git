@@ -7,6 +7,7 @@ public class Scr_DatosCuriosos : MonoBehaviour {
 
     [Tooltip("Datos curiosos: se hara random entre este arreglo. Formato Text Mesh Pro")]
     public string[] datosCuriosos;
+    public string[] curiousFacts;
     public TextMeshProUGUI txtDisplay;
     [Header("Carga de escena")]
     public Scr_SceneManager sceneManager;
@@ -27,8 +28,18 @@ public class Scr_DatosCuriosos : MonoBehaviour {
     /// <returns>regresa el string del dato curioso</returns>
     string GetRandomText()
     {
-        randomIndex = Random.Range(0, datosCuriosos.Length);
-        return datosCuriosos[randomIndex];
+        string result;
+        if(Scr_Lang.isEnglish)
+        {
+            randomIndex = Random.Range(0, curiousFacts.Length);
+            result = curiousFacts[randomIndex];
+        }
+        else
+        {
+            randomIndex = Random.Range(0, datosCuriosos.Length);
+            result = datosCuriosos[randomIndex];
+        }
+        return result; 
     }
 
     

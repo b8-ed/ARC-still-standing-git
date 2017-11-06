@@ -7,7 +7,7 @@ public class SCR_MainMenuManager : MonoBehaviour {
 
 	public void OnJugarClicked()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public void OnAyudaClicked()
@@ -22,6 +22,6 @@ public class SCR_MainMenuManager : MonoBehaviour {
 
     public void OnDonarClicked()
     {
-        Application.OpenURL("https://www.paypal.com/mx/webapps/mpp/merchant");
+        Application.OpenURL("https://cruzrojadonaciones.org");
     }
 }

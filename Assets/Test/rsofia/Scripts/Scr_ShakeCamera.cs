@@ -9,52 +9,68 @@ using UnityEngine.SceneManagement;
 public class Scr_ShakeCamera : MonoBehaviour
 {
     public Transform camMainT;
-    public float angle = 30.0f;
+    public float minMov = 1.2f;
+    public float maxMov = 2.9f;
     public float lerpTime = 0.20f;
     public int timesToShake = 5;
     private int timesShaken = 0;
+
+    private bool isLerping = true;
+    private float timeTakenDuringLerp = 0.2f;
+    private Vector3 startRotation;
+    private Vector3 endRotation;
+    private float timeStartedLerp;
+
+    private int count = 0;
+    private int maxCount = 8;
 
     //MAYBE DO IT WITH LERP INSTEAD
 
 	void Start ()
 	{
         ShakeCam();
-
     }	
 
     public void ShakeCam()
     {
-        StartCoroutine(RotateForward());        
+        StartShake(camMainT.position, new Vector3(camMainT.position.x, maxMov, camMainT.position.z));      
     }
 
-    IEnumerator RotateForward()
+    void StartShake(Vector3 a, Vector3 b)
     {
-        camMainT.transform.Rotate(0, 0, angle, Space.Self);
-        print("ROTATING CAMERA " + angle);
-        yield return new WaitForSeconds(lerpTime);
-        timesShaken++;
-        if (timesShaken < 5)
+        isLerping = true;
+        timeStartedLerp = Time.time;
+        startRotation = a;
+        endRotation = b;
+    }
+
+    private void FixedUpdate()
+    {
+        if(isLerping)
         {
-            StartCoroutine(RotateMiddle());
+            float timeSince = Time.time - timeStartedLerp;
+            float percentageDone = timeSince / timeTakenDuringLerp;
+
+            camMainT.position = Vector3.Lerp(startRotation, endRotation, percentageDone);
+            if (percentageDone >= 1.0f)
+            {
+                count++;
+                if(count < maxCount)
+                {
+                    if(count % 2 == 0)
+                        StartShake(camMainT.position, new Vector3(camMainT.position.x, maxMov, camMainT.position.z));
+                    else
+                        StartShake(camMainT.position, new Vector3(camMainT.position.x, minMov, camMainT.position.z));
+
+                }
+                else if(count == maxCount)
+                {
+                    //Reset Position to 0s
+                    StartShake(camMainT.position, new Vector3(camMainT.position.x, 1.5f, camMainT.position.z));
+                }
+                else
+                    isLerping = false;
+            }
         }
-        else
-            camMainT.transform.localEulerAngles = new Vector3(camMainT.transform.localEulerAngles.x, camMainT.transform.localEulerAngles.y, 0);
     }
-
-    IEnumerator RotateBack()
-    {
-
-        camMainT.transform.Rotate(Vector3.forward, -angle*2);
-        yield return new WaitForSeconds(lerpTime);
-        StartCoroutine(RotateForward());
-    }
-
-    IEnumerator RotateMiddle()
-    {
-
-        camMainT.transform.Rotate(Vector3.forward, -angle);
-        yield return new WaitForSeconds(lerpTime);
-        StartCoroutine(RotateBack());
-    }
-
 }

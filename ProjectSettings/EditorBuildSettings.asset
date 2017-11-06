@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 954881ec90a54f34e857c990d62e9730
   - enabled: 1
-    path: Assets/rsofia/Scenes/LoadingScene.unity
+    path: Assets/Scenes/LoadingScene.unity
     guid: febd9b9f98fb42d4593c57c523b70920
   - enabled: 1
-    path: Assets/rsofia/Scenes/GameScene.unity
+    path: Assets/Scenes/GameScene.unity
     guid: c7b95ea8cacd8564eb1dc44a0ab4cd8c
