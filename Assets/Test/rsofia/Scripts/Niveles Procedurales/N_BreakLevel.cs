@@ -10,6 +10,7 @@ public class N_BreakLevel : MonoBehaviour
 {
     public N_Modules[] allModules;
     public N_Base b;
+    private float secondsToWait = 60;
 
     private void Start()
     {
@@ -19,7 +20,9 @@ public class N_BreakLevel : MonoBehaviour
 
     IEnumerator Break()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForFixedUpdate();
+        print("CALLED");
+        GetComponent<Scr_ShakeCamera>().ShakeCam();
         Earthquake();
     }
 

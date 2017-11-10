@@ -280,6 +280,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1926659709714488, guid: e7de43f2da685c942b99af372cce2c58, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7de43f2da685c942b99af372cce2c58, type: 2}
   m_IsPrefabParent: 0
@@ -903,6 +907,15 @@ Prefab:
       propertyPath: m_fontSizeBase
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 114835576410086304, guid: 09578922bcee3844b922df1c51619fbd,
+        type: 2}
+      propertyPath: escenaACargar
+      value: GameSceneSofi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700747796433888, guid: 09578922bcee3844b922df1c51619fbd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09578922bcee3844b922df1c51619fbd, type: 2}
   m_IsPrefabParent: 0
@@ -975,21 +988,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: enVersion.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: spaVersion.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: txtToChange.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1024,36 +1022,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
         type: 2}
-      propertyPath: enVersion.Array.data[2]
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: enVersion.Array.data[3]
-      value: Exit
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: enVersion.Array.data[4]
-      value: Donate
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: spaVersion.Array.data[2]
-      value: Jugar
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: spaVersion.Array.data[3]
-      value: Salir
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: spaVersion.Array.data[4]
-      value: Donar
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
       propertyPath: txtToChange.Array.data[0]
       value: 
       objectReference: {fileID: 527189072}
@@ -1062,26 +1030,6 @@ Prefab:
       propertyPath: txtToChange.Array.data[1]
       value: 
       objectReference: {fileID: 885242838}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: enVersion.Array.data[0]
-      value: Curious Facts
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: enVersion.Array.data[1]
-      value: Did you know?
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: spaVersion.Array.data[1]
-      value: "\xBFSab\xEDas que...?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
-        type: 2}
-      propertyPath: spaVersion.Array.data[0]
-      value: Datos Curiosos
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
   m_IsPrefabParent: 0

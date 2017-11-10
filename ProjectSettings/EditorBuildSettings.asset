@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: febd9b9f98fb42d4593c57c523b70920
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: c7b95ea8cacd8564eb1dc44a0ab4cd8c
+  - enabled: 1
+    path: Assets/Test/rsofia/Scenes/GameSceneSofi.unity
+    guid: 3552f9dc15e2c1847833f98863543307

@@ -24,15 +24,11 @@ public class Scr_ShakeCamera : MonoBehaviour
     private int count = 0;
     private int maxCount = 8;
 
-    //MAYBE DO IT WITH LERP INSTEAD
-
-	void Start ()
-	{
-        ShakeCam();
-    }	
+    public GameObject dustParticles;
 
     public void ShakeCam()
     {
+        dustParticles.SetActive(true);
         StartShake(camMainT.position, new Vector3(camMainT.position.x, maxMov, camMainT.position.z));      
     }
 
@@ -55,21 +51,24 @@ public class Scr_ShakeCamera : MonoBehaviour
             if (percentageDone >= 1.0f)
             {
                 count++;
-                if(count < maxCount)
+                if (count < maxCount)
                 {
-                    if(count % 2 == 0)
+                    if (count % 2 == 0)
                         StartShake(camMainT.position, new Vector3(camMainT.position.x, maxMov, camMainT.position.z));
                     else
                         StartShake(camMainT.position, new Vector3(camMainT.position.x, minMov, camMainT.position.z));
 
                 }
-                else if(count == maxCount)
+                else if (count == maxCount)
                 {
                     //Reset Position to 0s
                     StartShake(camMainT.position, new Vector3(camMainT.position.x, 1.5f, camMainT.position.z));
                 }
                 else
+                {
                     isLerping = false;
+                    dustParticles.SetActive(false);
+                }
             }
         }
     }

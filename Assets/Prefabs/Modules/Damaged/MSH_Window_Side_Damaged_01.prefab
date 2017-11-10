@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4761437691145126}
   - component: {fileID: 33195506273631980}
   - component: {fileID: 23260287624145684}
+  - component: {fileID: 65945923655986934}
   m_Layer: 0
   m_Name: MSH_Window_Side_Damaged_01
   m_TagString: Untagged
@@ -124,6 +125,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4.0000014, z: 0.3}
   m_Center: {x: 0, y: 0, z: -0.12}
+--- !u!65 &65945923655986934
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977383485408592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.66, y: 4.0000014, z: 3.3000011}
+  m_Center: {x: -2.03, y: -2.3716923e-20, z: 1.3500006}
 --- !u!114 &114139441008030664
 MonoBehaviour:
   m_ObjectHideFlags: 1

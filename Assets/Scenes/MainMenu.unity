@@ -110,7 +110,7 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 --- !u!114 &227678931 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+  m_PrefabParentObject: {fileID: 114152864192182010, guid: 079b7b33659585c47991f6220ac299ca,
     type: 2}
   m_PrefabInternal: {fileID: 1407652586}
   m_Script: {fileID: 11500000, guid: 669201efa409bd54d9177db8bb4b5670, type: 3}
@@ -287,65 +287,65 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4735569589913818, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+    - target: {fileID: 4896171722440204, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+    - target: {fileID: 114152864192182010, guid: 079b7b33659585c47991f6220ac299ca,
         type: 2}
       propertyPath: txtToChange.Array.data[0]
       value: 
       objectReference: {fileID: 1440770773}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+    - target: {fileID: 114152864192182010, guid: 079b7b33659585c47991f6220ac299ca,
         type: 2}
       propertyPath: txtToChange.Array.data[1]
       value: 
       objectReference: {fileID: 1163298098}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+    - target: {fileID: 114152864192182010, guid: 079b7b33659585c47991f6220ac299ca,
         type: 2}
       propertyPath: txtToChange.Array.data[2]
       value: 
       objectReference: {fileID: 1633688353}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+    - target: {fileID: 114152864192182010, guid: 079b7b33659585c47991f6220ac299ca,
         type: 2}
       propertyPath: txtToChange.Array.data[3]
       value: 
       objectReference: {fileID: 1057880657}
-    - target: {fileID: 114802767440257356, guid: e4d045ade778cb948be10cbb173823aa,
+    - target: {fileID: 114152864192182010, guid: 079b7b33659585c47991f6220ac299ca,
         type: 2}
       propertyPath: txtToChange.Array.data[4]
       value: 
       objectReference: {fileID: 1555755173}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e4d045ade778cb948be10cbb173823aa, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 079b7b33659585c47991f6220ac299ca, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1440770773 stripped
 MonoBehaviour:
@@ -409,6 +409,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 227678931}
+    - target: {fileID: 1717726229174586, guid: 03f0e3b284b4ac040812f2e39bdbd3ff, type: 2}
+      propertyPath: m_Name
+      value: txtAyuda
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03f0e3b284b4ac040812f2e39bdbd3ff, type: 2}
   m_IsPrefabParent: 0

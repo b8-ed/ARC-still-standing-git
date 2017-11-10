@@ -51,7 +51,7 @@ public class N_Base : MonoBehaviour
                 grid[i, j] = new N_Grid();
         }
         MakeLevel();
-        PrintGrid();
+        //PrintGrid();
     }
 
     public void MakeLevel()
