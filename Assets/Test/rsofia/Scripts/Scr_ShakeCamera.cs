@@ -53,7 +53,7 @@ public class Scr_ShakeCamera : MonoBehaviour
             float timeSince = Time.time - timeStartedLerp;
             float percentageDone = timeSince / timeTakenDuringLerp;
 
-            //camMainT.position = Vector3.Lerp(startRotation, endRotation, percentageDone);
+            camMainT.localPosition = Vector3.Lerp(startRotation, endRotation, percentageDone);
             if (percentageDone >= 1.0f)
             {
                 count++;
