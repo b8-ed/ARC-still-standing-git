@@ -15,7 +15,7 @@ public class Scr_ShakeCamera : MonoBehaviour
     public int timesToShake = 5;
     private int timesShaken = 0;
 
-    private bool isLerping = true;
+    public bool isLerping = true;
     private float timeTakenDuringLerp = 0.2f;
     private Vector3 startRotation;
     private Vector3 endRotation;

@@ -9,7 +9,10 @@ public class scr_Camera : MonoBehaviour {
 
     // Update is called once per frame
     void LateUpdate () {
-		
+
+        if (FindObjectOfType<Scr_ShakeCamera>().isLerping)
+            return;
+
 		currentRotation.x += Input.GetAxis ("Mouse X") * sensitivity;
 		currentRotation.y += Input.GetAxis ("Mouse Y") * sensitivity;
 
