@@ -23,8 +23,14 @@ public class Scr_ShakeCamera : MonoBehaviour
 
     private int count = 0;
     private int maxCount = 8;
+    private float camY = 0.0f;
 
     public GameObject dustParticles;
+
+    private void Start()
+    {
+        camY = camMainT.position.y;
+    }
 
     public void ShakeCam()
     {
@@ -47,7 +53,7 @@ public class Scr_ShakeCamera : MonoBehaviour
             float timeSince = Time.time - timeStartedLerp;
             float percentageDone = timeSince / timeTakenDuringLerp;
 
-            camMainT.position = Vector3.Lerp(startRotation, endRotation, percentageDone);
+            //camMainT.position = Vector3.Lerp(startRotation, endRotation, percentageDone);
             if (percentageDone >= 1.0f)
             {
                 count++;
@@ -67,6 +73,7 @@ public class Scr_ShakeCamera : MonoBehaviour
                 else
                 {
                     isLerping = false;
+                    camMainT.position = new Vector3(camMainT.position.x, camMainT.position.y, camMainT.position.z);
                     dustParticles.SetActive(false);
                 }
             }

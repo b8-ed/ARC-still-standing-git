@@ -174,6 +174,11 @@ Prefab:
       propertyPath: dustParticles
       value: 
       objectReference: {fileID: 921401224}
+    - target: {fileID: 114884184902795708, guid: 746092e448767874e803f47e7334db68,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 746092e448767874e803f47e7334db68, type: 2}
   m_IsPrefabParent: 0
@@ -462,6 +467,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1375409008 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1113455431662632, guid: cf73e56ae62c96b4595100ca8bd0b44d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1508258895}
 --- !u!1001 &1508258895
 Prefab:
   m_ObjectHideFlags: 0
@@ -568,6 +578,20 @@ Prefab:
     - target: {fileID: 4308657328407000, guid: cf73e56ae62c96b4595100ca8bd0b44d, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114441389842650434, guid: cf73e56ae62c96b4595100ca8bd0b44d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114910324385240628, guid: cf73e56ae62c96b4595100ca8bd0b44d,
+        type: 2}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1375409008}
+    - target: {fileID: 4932445403150504, guid: cf73e56ae62c96b4595100ca8bd0b44d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf73e56ae62c96b4595100ca8bd0b44d, type: 2}
