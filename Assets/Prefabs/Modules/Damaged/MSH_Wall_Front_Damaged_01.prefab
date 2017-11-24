@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33567920323501020}
   - component: {fileID: 23590773208779350}
   - component: {fileID: 65523770953315704}
+  - component: {fileID: 65065042491281674}
   m_Layer: 0
   m_Name: MSH_Wall_Front_Damaged_01
   m_TagString: Untagged
@@ -81,6 +82,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634155384216220}
   m_Mesh: {fileID: 4300000, guid: 97509e67838be2646bdca0018993fed9, type: 3}
+--- !u!65 &65065042491281674
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634155384216220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0000005, y: 0.35, z: 3.3000011}
+  m_Center: {x: 0.00000023841858, y: 1.86, z: 1.3500006}
 --- !u!65 &65523770953315704
 BoxCollider:
   m_ObjectHideFlags: 1

@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4409906824362934}
   - component: {fileID: 33972772221426308}
   - component: {fileID: 23464929845063938}
+  - component: {fileID: 65780651656695866}
   m_Layer: 0
   m_Name: MSH_Room_Quad_Damaged_04
   m_TagString: Untagged
@@ -405,6 +406,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.31, y: 7.44, z: 0.4}
   m_Center: {x: 1.84, y: -1.96, z: -0.14}
+--- !u!65 &65780651656695866
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959874020092994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.000188, y: 8.000006, z: 3.340314}
+  m_Center: {x: 0, y: -0.00000023841852, z: 1.329845}
 --- !u!114 &114531401764805422
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,6 +23,12 @@ public class N_BreakLevel : MonoBehaviour
         yield return new WaitForFixedUpdate();
         print("CALLED");
         GetComponent<Scr_ShakeCamera>().ShakeCam();
+        StartCoroutine(WaitForEarthQuake());
+    }
+
+    IEnumerator WaitForEarthQuake()
+    {
+        yield return new WaitForSeconds(GetComponent<Scr_ShakeCamera>().timetoTurnOffParticles);
         Earthquake();
     }
 
