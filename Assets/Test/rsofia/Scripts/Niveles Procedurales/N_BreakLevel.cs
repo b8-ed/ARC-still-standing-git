@@ -11,24 +11,26 @@ public class N_BreakLevel : MonoBehaviour
     public N_Modules[] allModules;
     public N_Base b;
     private float secondsToWait = 60;
+    private Scr_ShakeCamera shakeCam;
 
     private void Start()
     {
         //sortModulesById();
         StartCoroutine(Break());
+        shakeCam = FindObjectOfType<Scr_ShakeCamera>();
     }
 
     IEnumerator Break()
     {
-        yield return new WaitForFixedUpdate();
-        print("CALLED");
-        GetComponent<Scr_ShakeCamera>().ShakeCam();
+        yield return new WaitForSeconds(10);
+        //print("CALLED");
+        shakeCam.ShakeCam();
         StartCoroutine(WaitForEarthQuake());
     }
 
     IEnumerator WaitForEarthQuake()
     {
-        yield return new WaitForSeconds(GetComponent<Scr_ShakeCamera>().timetoTurnOffParticles);
+        yield return new WaitForSeconds(shakeCam.timetoTurnOffParticles);
         Earthquake();
     }
 

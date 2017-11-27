@@ -24,18 +24,29 @@ public class Scr_Pausa : MonoBehaviour
         }
     }
 
+    public void PauseController()
+    {
+        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
+        
+    }
+
+    public void PlayController()
+    {
+        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = true;
+        player.GetComponentInChildren<scr_Camera>().enabled = true;
+    }
+
     public void TurnOnMenu()
     {
         pauseMenu.SetActive(true);
-        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
         player.GetComponentInChildren<scr_Camera>().enabled = false;
+        PauseController();
     }
 
     public void ContinueGame()
     {
         pauseMenu.SetActive(false);
-        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = true;
-        player.GetComponentInChildren<scr_Camera>().enabled = true;
+        PlayController();
     }
 
     public void ExitGame()
