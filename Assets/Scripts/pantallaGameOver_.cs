@@ -19,6 +19,7 @@ public class pantallaGameOver_ : MonoBehaviour
     /// </summary>
     Button btnSalir;
     float alpha;
+    public GameObject myCanvas;
 	void Start ()
     {
         alpha = 0.0f;
@@ -26,8 +27,16 @@ public class pantallaGameOver_ : MonoBehaviour
         txtMensaje = gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.GetComponent<Text>();
         btnSalir = gameObject.transform.GetChild(0).gameObject.transform.GetChild(3).gameObject.GetComponent<Button>();
         btnSalir.gameObject.SetActive(false);
+        myCanvas.SetActive(false);
+    }
+
+    public void BeginGameOver()
+    {
+        myCanvas.SetActive(true);
+        FindObjectOfType<Scr_Pausa>().PauseController();
         cargarPantalla();
     }
+
     /// <summary>
     /// Boton para realizar alguna accion para salir de la pantalla de GameOver
     /// Falta terminarlo

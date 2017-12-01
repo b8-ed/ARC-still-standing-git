@@ -10,13 +10,16 @@ public class Person : MonoBehaviour {
     {
         CantidadHumo += 0.1f;
         if (CantidadHumo >= MaxHumo)
-        {//matar al personajes
-           
+        {
+            //matar al personajes
+            print("muerto");
         }
 
     }
-    public void Muerte()
+    public void Muerte(Trigger.Muertes muerte)
     {
+        FindObjectOfType<pantallaGameOver_>().BeginGameOver();
+        FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + muerte.ToString());
         print("muerto");
     }
     

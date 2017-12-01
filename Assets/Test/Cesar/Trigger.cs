@@ -23,29 +23,31 @@ public class Trigger : MonoBehaviour
     void Start()
     {
         Caer = false;
-        if (!gameObject.GetComponent<Rigidbody>())
-            gameObject.AddComponent<Rigidbody>();
+        //if (!gameObject.GetComponent<Rigidbody>())
+        //    gameObject.AddComponent<Rigidbody>();
     }
 
     void OnTriggerEnter(Collider Person)
     {
+        print("COLLIDER ENTER " + Person.tag);
         if (Person.tag == "Player" && v_muertes== Muertes.elevador)
         {
             Caer = true;
             StartCoroutine(Elevador());
+            Person.GetComponent<Person>().Muerte(Muertes.elevador);
         } else if(Person.tag == "Player" && v_muertes == Muertes.cable)
         {
-            Person.GetComponent<Person>().Muerte();
+            Person.GetComponent<Person>().Muerte(Muertes.cable);
         }
         else if (Person.tag == "Player" && v_muertes == Muertes.estructura_inestable)
         {
             Derrumbe();
-            Person.GetComponent<Person>().Muerte();
+            Person.GetComponent<Person>().Muerte(Muertes.estructura_inestable);
         }
         else if (Person.tag == "Player" && v_muertes == Muertes.vidrios_muro)
         {
             Derrumbe();
-            Person.GetComponent<Person>().Muerte();
+            Person.GetComponent<Person>().Muerte(Muertes.vidrios_muro);
         }
     }
     void OnTriggerExit(Collider Person)
@@ -65,12 +67,12 @@ public class Trigger : MonoBehaviour
     }
     IEnumerator Elevador()
     {
+        print("CAYENDO DEL ELEVADOR");
         yield return new WaitForSeconds(1.0f);
         TimerElevador -= 1.0f;
 
         if (TimerElevador < 1 && Caer == true)
         {
-            //termina
         }
         else
         {
