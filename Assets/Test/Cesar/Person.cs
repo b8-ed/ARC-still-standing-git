@@ -19,7 +19,9 @@ public class Person : MonoBehaviour {
     public void Muerte(Trigger.Muertes muerte)
     {
         FindObjectOfType<pantallaGameOver_>().BeginGameOver();
-        FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + muerte.ToString());
+        string temp = muerte.ToString();
+        temp = temp.Replace('_', ' ');
+        FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + temp);
         print("muerto");
     }
     

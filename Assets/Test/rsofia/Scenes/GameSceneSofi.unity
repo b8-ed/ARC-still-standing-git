@@ -1633,6 +1633,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHumo: 100
+--- !u!114 &1925648287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925648284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8525b8b779a2a68469d3d9fdf14a4a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1950997761 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1377381284632650, guid: 23244aa653f19d24188cab541896ceb8,

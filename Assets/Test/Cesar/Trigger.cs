@@ -11,7 +11,8 @@ public class Trigger : MonoBehaviour
         elevador,
         estructura_inestable,
         cable,
-        vidrios_muro
+        vidrios_muro,
+        Zona_Segura
     }
     [Tooltip("Elige la situacion , elevador tiene un timer de cuanto estas adentro y te mata")]
     public  Muertes v_muertes;

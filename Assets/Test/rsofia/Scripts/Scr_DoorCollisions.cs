@@ -17,7 +17,7 @@ public class Scr_DoorCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag != "DoorFrame" && other.gameObject != parent)
+        if(other.tag != "DoorFrame" && other.gameObject != parent && other.tag != "Player")
         {            
             //rotar - 90
             if (!parent.GetComponent<N_Modules>().isCorner)
