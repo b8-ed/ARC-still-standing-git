@@ -23,7 +23,7 @@ public class N_Base : MonoBehaviour
     bool[] isEscapeDisplayed = { false, false}; //cannot be more than 2 escape
     bool[] isStairsDisplayed = { false, false };
     bool isElevadorDisplayed = false;
-
+    
     //id of prefab modules
     enum Modules
     {

@@ -28,43 +28,56 @@ public class Trigger : MonoBehaviour
         //    gameObject.AddComponent<Rigidbody>();
     }
 
-    void OnTriggerEnter(Collider Person)
+    void OnTriggerEnter(Collider person)
     {
-        print("COLLIDER ENTER " + Person.tag);
-        if (Person.tag == "Player" && v_muertes== Muertes.elevador)
+        print("COLLIDER ENTER " + person.tag);
+        if(Person.didEarthquakeHappen)
         {
-            Caer = true;
-            StartCoroutine(Elevador());
-            Person.GetComponent<Person>().Muerte(Muertes.elevador);
-        } else if(Person.tag == "Player" && v_muertes == Muertes.cable)
-        {
-            Person.GetComponent<Person>().Muerte(Muertes.cable);
+            if (person.tag == "Player" && v_muertes == Muertes.elevador)
+            {
+                Caer = true;
+                StartCoroutine(Elevador());
+                person.GetComponent<Person>().Muerte(Muertes.elevador);
+            }
+            else if (person.tag == "Player" && v_muertes == Muertes.cable)
+            {
+                person.GetComponent<Person>().Muerte(Muertes.cable);
+            }
+            else if (person.tag == "Player" && v_muertes == Muertes.estructura_inestable)
+            {
+                Derrumbe();
+                person.GetComponent<Person>().Muerte(Muertes.estructura_inestable);
+            }
+            else if (person.tag == "Player" && v_muertes == Muertes.vidrios_muro)
+            {
+                Derrumbe();
+                person.GetComponent<Person>().Muerte(Muertes.vidrios_muro);
+            }
         }
-        else if (Person.tag == "Player" && v_muertes == Muertes.estructura_inestable)
-        {
-            Derrumbe();
-            Person.GetComponent<Person>().Muerte(Muertes.estructura_inestable);
-        }
-        else if (Person.tag == "Player" && v_muertes == Muertes.vidrios_muro)
-        {
-            Derrumbe();
-            Person.GetComponent<Person>().Muerte(Muertes.vidrios_muro);
-        }
+       
     }
-    void OnTriggerExit(Collider Person)
+    void OnTriggerExit(Collider person)
     {
-        if (Person.tag == "Player" && v_muertes == Muertes.elevador)
+        if(Person.didEarthquakeHappen)
         {
-            Caer = false;
-            StopCoroutine(Elevador());
+            if (person.tag == "Player" && v_muertes == Muertes.elevador)
+            {
+                Caer = false;
+                StopCoroutine(Elevador());
+            }
         }
+        
     }
-    void OnTriggerStay(Collider Person)
+    void OnTriggerStay(Collider person)
     {
-        if(Person.tag=="Player" && v_muertes ==Muertes.humo)
+        if(Person.didEarthquakeHappen)
         {
-            Person.GetComponent<Person>().Add_Humo();
+            if (person.tag == "Player" && v_muertes == Muertes.humo)
+            {
+                person.GetComponent<Person>().Add_Humo();
+            }
         }
+        
     }
     IEnumerator Elevador()
     {

@@ -34,6 +34,7 @@ public class N_BreakLevel : MonoBehaviour
 
     IEnumerator WaitForEarthQuake()
     {
+        Person.didEarthquakeHappen = true;
         yield return new WaitForSeconds(shakeCam.timetoTurnOffParticles);
         if (!Scr_SafeZones.isOnSafeZone)
             FindObjectOfType<Person>().Muerte(Trigger.Muertes.Zona_Segura);

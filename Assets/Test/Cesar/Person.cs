@@ -6,6 +6,9 @@ public class Person : MonoBehaviour {
 
     float CantidadHumo = 0.0f;
     public float MaxHumo = 100.0f;
+    
+    public static bool didEarthquakeHappen = false;
+
     public void Add_Humo()
     {
         CantidadHumo += 0.1f;
