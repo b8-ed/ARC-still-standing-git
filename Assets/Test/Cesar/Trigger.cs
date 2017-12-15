@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Trigger : MonoBehaviour
 {
@@ -14,18 +15,29 @@ public class Trigger : MonoBehaviour
         vidrios_muro,
         Zona_Segura
     }
+
+    //Estos nada mas sirven para traducir
+    public enum Deaths
+    {
+        Smoke,
+        Elevator,
+        Failed_Structure,
+        Cable,
+        Windows,
+        Safe_Zone
+    }
+
     [Tooltip("Elige la situacion , elevador tiene un timer de cuanto estas adentro y te mata")]
     public  Muertes v_muertes;
 
 
     bool Caer = false;
     public float TimerElevador = 5.0f;
+    private bool canDie = false;
 
     void Start()
     {
         Caer = false;
-        //if (!gameObject.GetComponent<Rigidbody>())
-        //    gameObject.AddComponent<Rigidbody>();
     }
 
     void OnTriggerEnter(Collider person)
@@ -37,21 +49,21 @@ public class Trigger : MonoBehaviour
             {
                 Caer = true;
                 StartCoroutine(Elevador());
-                person.GetComponent<Person>().Muerte(Muertes.elevador);
+                KillPlayerBy(person.GetComponent<Person>(), Muertes.elevador);
             }
             else if (person.tag == "Player" && v_muertes == Muertes.cable)
             {
-                person.GetComponent<Person>().Muerte(Muertes.cable);
+                KillPlayerBy(person.GetComponent<Person>(), Muertes.cable);
             }
             else if (person.tag == "Player" && v_muertes == Muertes.estructura_inestable)
             {
                 Derrumbe();
-                person.GetComponent<Person>().Muerte(Muertes.estructura_inestable);
+                KillPlayerBy(person.GetComponent<Person>(), Muertes.estructura_inestable);
             }
             else if (person.tag == "Player" && v_muertes == Muertes.vidrios_muro)
             {
                 Derrumbe();
-                person.GetComponent<Person>().Muerte(Muertes.vidrios_muro);
+                KillPlayerBy(person.GetComponent<Person>(), Muertes.vidrios_muro);
             }
         }
        
@@ -98,4 +110,36 @@ public class Trigger : MonoBehaviour
     {
         print("se cae todo te mueres");
     }
+
+    void KillPlayerBy(Person person, Muertes muerte)
+    {
+        canDie = true;
+        string strDeath = GetStringByDeath(muerte);
+
+        person.DisplayWarning(strDeath);
+        //person.GetComponent<Person>().Muerte(GetStringByDeath(muerte));
+    }
+
+    public string GetStringByDeath(Muertes muerte)
+    {
+        string result = muerte.ToString();
+        result = result.Replace('_', ' ');
+
+        if (Scr_Lang.isEnglish)
+        {
+            int index = (int)muerte;
+            Deaths death = (Deaths)(index);
+            result = GetStringByDeath(death);
+        }
+
+        return result;
+    }
+
+    string GetStringByDeath(Deaths deaths)
+    {
+        string result = deaths.ToString();
+        result = result.Replace('_', ' ');
+        return result;
+    }
+
 }

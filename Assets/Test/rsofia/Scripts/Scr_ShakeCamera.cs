@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class Scr_ShakeCamera : MonoBehaviour
 {
     public GameObject dustParticles;
-    public float timetoTurnOffParticles = 4.0f;
+    public float timetoTurnOffParticles = 10.0f; //this is the time of the earthquake
     
 
     public void ShakeCam()

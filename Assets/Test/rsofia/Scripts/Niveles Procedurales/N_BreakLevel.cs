@@ -13,6 +13,7 @@ public class N_BreakLevel : MonoBehaviour
     private float secondsToWait = 60;
     private Scr_ShakeCamera shakeCam;
     private float secondsTillBreak = 0;
+    Person person;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class N_BreakLevel : MonoBehaviour
 
         StartCoroutine(Break());
         shakeCam = FindObjectOfType<Scr_ShakeCamera>();
+
+        person = FindObjectOfType<Person>();
     }
 
     IEnumerator Break()
@@ -35,11 +38,14 @@ public class N_BreakLevel : MonoBehaviour
     IEnumerator WaitForEarthQuake()
     {
         Person.didEarthquakeHappen = true;
+        person.DisplayWarning(FindObjectOfType<Trigger>().GetStringByDeath(Trigger.Muertes.Zona_Segura));
         yield return new WaitForSeconds(shakeCam.timetoTurnOffParticles);
         if (!Scr_SafeZones.isOnSafeZone)
-            FindObjectOfType<Person>().Muerte(Trigger.Muertes.Zona_Segura);
+        {            
+            person.Muerte(Trigger.Muertes.Zona_Segura);
+        }
         else
-            Debug.Log("<b> Persona sobrevivio </b>");
+            person.HideWarning();
         Earthquake();
     }
 
