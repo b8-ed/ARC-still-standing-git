@@ -64,7 +64,7 @@ public class Person : MonoBehaviour {
 
     public void HideWarning()
     {
-
+        deathWarning.SetActive(false);
     }
 
 }

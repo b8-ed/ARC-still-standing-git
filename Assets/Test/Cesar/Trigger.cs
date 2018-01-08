@@ -77,6 +77,10 @@ public class Trigger : MonoBehaviour
                 Caer = false;
                 StopCoroutine(Elevador());
             }
+            if(person.tag == "Player")
+            {
+                CancelKill();
+            }
         }
         
     }
@@ -95,15 +99,19 @@ public class Trigger : MonoBehaviour
     {
         print("CAYENDO DEL ELEVADOR");
         yield return new WaitForSeconds(1.0f);
-        TimerElevador -= 1.0f;
+        if(canDie)
+        {
+            TimerElevador -= 1.0f;
 
-        if (TimerElevador < 1 && Caer == true)
-        {
+            if (TimerElevador < 1 && Caer == true)
+            {
+            }
+            else
+            {
+                StartCoroutine(Elevador());
+            }
         }
-        else
-        {
-            StartCoroutine(Elevador());
-        }
+        
     }
 
     void Derrumbe()
@@ -117,7 +125,21 @@ public class Trigger : MonoBehaviour
         string strDeath = GetStringByDeath(muerte);
 
         person.DisplayWarning(strDeath);
-        //person.GetComponent<Person>().Muerte(GetStringByDeath(muerte));
+        StartCoroutine(GiveTimeForWarning(person, strDeath));
+    }
+
+    void CancelKill()
+    {
+        canDie = false;
+        FindObjectOfType<Person>().HideWarning();
+    }
+
+    IEnumerator GiveTimeForWarning(Person person, string strDeath)
+    {
+        yield return new WaitForSeconds(7);
+        if (canDie)
+            person.GetComponent<Person>().Muerte(strDeath);
+        person.HideWarning();
     }
 
     public string GetStringByDeath(Muertes muerte)
