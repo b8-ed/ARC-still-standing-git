@@ -12,22 +12,32 @@ public class Scr_DoorCollisions : MonoBehaviour
 
     private void Awake()
     {
-        parent = transform.parent.gameObject;
+        if (transform.parent.GetComponent<N_Modules>() != null)
+            parent = transform.parent.gameObject;
+        else if (transform.parent.parent.GetComponent<N_Modules>() != null)
+            parent = transform.parent.parent.gameObject;
+        else if (transform.parent.parent.parent.GetComponent<N_Modules>() != null)
+            parent = transform.parent.parent.parent.gameObject;
+        else if (transform.parent.parent.parent.parent.GetComponent<N_Modules>() != null)
+            parent = transform.parent.parent.parent.parent.gameObject;
+        else
+            print("ERROR WARNING: " + transform.parent.parent.name);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag != "DoorFrame" && other.gameObject != parent && other.tag != "Player")
-        {            
+        {
             //rotar - 90
-            if (!parent.GetComponent<N_Modules>().isCorner)
+            N_Modules module = parent.GetComponent<N_Modules>();
+            if (!module.isCorner)
             {
-                if (parent.GetComponent<N_Modules>().timesSpinned < 4)
+                if (module.timesSpinned < 4)
                 {
-                    if (parent.GetComponent<N_Modules>().gridLayout[0].rowdata.Length > 1)
+                    if (module.gridLayout[0].rowdata.Length > 1)
                     {
                         //parent.transform.Rotate(0.0f, 0.0f, 180.0f);
-                        if(parent.GetComponent<N_Modules>().id == 2)
+                        if(module.id == 2)
                         {
                             Transform child = parent.transform.Find(parent.name);
                             if (child != null)
@@ -35,7 +45,7 @@ public class Scr_DoorCollisions : MonoBehaviour
                                 child.Rotate(0.0f, 0.0f, 180.0f);
                             }
                         }  
-                        else if(parent.GetComponent<N_Modules>().id == 4)
+                        else if(module.id == 4)
                         {
                             Transform child = parent.transform.Find(parent.name);
                             if (child != null)
@@ -43,7 +53,7 @@ public class Scr_DoorCollisions : MonoBehaviour
                                 child.Rotate(0.0f, 0.0f, 90.0f);
                             }
                         }
-                        else if(parent.GetComponent<N_Modules>().id == 7 || parent.GetComponent<N_Modules>().id == 8)
+                        else if(module.id == 7 || module.id == 8)
                         {
                             if(other.GetComponent<N_Modules>() != null)
                             {
@@ -56,7 +66,7 @@ public class Scr_DoorCollisions : MonoBehaviour
                     }
                     else
                         parent.transform.Rotate(new Vector3(0.0f, 0.0f, -90.0f));
-                    parent.GetComponent<N_Modules>().timesSpinned++;
+                    module.timesSpinned++;
                 }
             }
 
