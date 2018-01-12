@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: 395d4753eb858b249b2653bfcc293cf9
+timeCreated: 1513636944
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CAT_FridaHead
+    100002: CAT_FridaL_Ear
+    100004: CAT_FridaL_Ear_2
+    100006: CAT_FridaL_Ear_3
+    100008: CAT_FridaL_Front_Leg1
+    100010: CAT_FridaL_Front_Leg2
+    100012: CAT_FridaL_Front_LegDigit01
+    100014: CAT_FridaL_Front_LegPalm
+    100016: CAT_FridaL_Front_LegPlatform
+    100018: CAT_FridaL_Front_LegShoulderblade
+    100020: CAT_FridaLLeg1
+    100022: CAT_FridaLLeg2
+    100024: CAT_FridaLLegDigit01
+    100026: CAT_FridaLLegPalm
+    100028: CAT_FridaLLegPlatform
+    100030: CAT_FridaNeck1
+    100032: CAT_FridaNeck2
+    100034: CAT_FridaNeck3
+    100036: CAT_FridaPelvis
+    100038: CAT_FridaR_Ear
+    100040: CAT_FridaR_Ear_2
+    100042: CAT_FridaR_Ear_3
+    100044: CAT_FridaR_Front_Leg1
+    100046: CAT_FridaR_Front_Leg2
+    100048: CAT_FridaR_Front_LegDigit01
+    100050: CAT_FridaR_Front_LegPalm
+    100052: CAT_FridaR_Front_LegShoulderblade
+    100054: CAT_FridaRibcage
+    100056: CAT_FridaRLeg1
+    100058: CAT_FridaRLeg2
+    100060: CAT_FridaRLegDigit01
+    100062: CAT_FridaRLegPalm
+    100064: CAT_FridaSpine1
+    100066: CAT_FridaSpine2
+    100068: CAT_FridaSpine3
+    100070: CAT_FridaTail1
+    100072: CAT_FridaTail2
+    100074: CAT_FridaTail3
+    100076: CAT_FridaTail4
+    100078: MSH_Frida
+    100080: //RootNode
+    100082: MSH_Frida_Mask1
+    100084: MSH_Frida_Mask2
+    100086: MSH_Frida_Vest
+    100088: CAT_FridaR_Front_LegPlatform
+    100090: CAT_FridaRLegPlatform
+    400000: CAT_FridaHead
+    400002: CAT_FridaL_Ear
+    400004: CAT_FridaL_Ear_2
+    400006: CAT_FridaL_Ear_3
+    400008: CAT_FridaL_Front_Leg1
+    400010: CAT_FridaL_Front_Leg2
+    400012: CAT_FridaL_Front_LegDigit01
+    400014: CAT_FridaL_Front_LegPalm
+    400016: CAT_FridaL_Front_LegPlatform
+    400018: CAT_FridaL_Front_LegShoulderblade
+    400020: CAT_FridaLLeg1
+    400022: CAT_FridaLLeg2
+    400024: CAT_FridaLLegDigit01
+    400026: CAT_FridaLLegPalm
+    400028: CAT_FridaLLegPlatform
+    400030: CAT_FridaNeck1
+    400032: CAT_FridaNeck2
+    400034: CAT_FridaNeck3
+    400036: CAT_FridaPelvis
+    400038: CAT_FridaR_Ear
+    400040: CAT_FridaR_Ear_2
+    400042: CAT_FridaR_Ear_3
+    400044: CAT_FridaR_Front_Leg1
+    400046: CAT_FridaR_Front_Leg2
+    400048: CAT_FridaR_Front_LegDigit01
+    400050: CAT_FridaR_Front_LegPalm
+    400052: CAT_FridaR_Front_LegShoulderblade
+    400054: CAT_FridaRibcage
+    400056: CAT_FridaRLeg1
+    400058: CAT_FridaRLeg2
+    400060: CAT_FridaRLegDigit01
+    400062: CAT_FridaRLegPalm
+    400064: CAT_FridaSpine1
+    400066: CAT_FridaSpine2
+    400068: CAT_FridaSpine3
+    400070: CAT_FridaTail1
+    400072: CAT_FridaTail2
+    400074: CAT_FridaTail3
+    400076: CAT_FridaTail4
+    400078: //RootNode
+    400080: MSH_Frida
+    400082: MSH_Frida_Mask1
+    400084: MSH_Frida_Mask2
+    400086: MSH_Frida_Vest
+    400088: CAT_FridaR_Front_LegPlatform
+    400090: CAT_FridaRLegPlatform
+    2300000: MSH_Frida_Vest
+    3300000: MSH_Frida_Vest
+    4300000: MSH_Frida
+    4300002: MSH_Frida_Mask1
+    4300004: MSH_Frida_Mask2
+    4300006: MSH_Frida_Vest
+    7400000: Idle
+    9500000: //RootNode
+    13700000: MSH_Frida
+    13700002: MSH_Frida_Mask1
+    13700004: MSH_Frida_Mask2
+    13700006: MSH_Frida_Vest
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CAT_FridaL_Front_LegPlatform
+        weight: 1
+      - path: CAT_FridaLLegPlatform
+        weight: 1
+      - path: CAT_FridaPelvis
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaLLeg1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaLLeg1/CAT_FridaLLeg2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaLLeg1/CAT_FridaLLeg2/CAT_FridaLLegPalm
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaLLeg1/CAT_FridaLLeg2/CAT_FridaLLegPalm/CAT_FridaLLegDigit01
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaRLeg1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaRLeg1/CAT_FridaRLeg2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaRLeg1/CAT_FridaRLeg2/CAT_FridaRLegPalm
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaRLeg1/CAT_FridaRLeg2/CAT_FridaRLegPalm/CAT_FridaRLegDigit01
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaL_Front_LegShoulderblade
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaL_Front_LegShoulderblade/CAT_FridaL_Front_Leg1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaL_Front_LegShoulderblade/CAT_FridaL_Front_Leg1/CAT_FridaL_Front_Leg2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaL_Front_LegShoulderblade/CAT_FridaL_Front_Leg1/CAT_FridaL_Front_Leg2/CAT_FridaL_Front_LegPalm
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaL_Front_LegShoulderblade/CAT_FridaL_Front_Leg1/CAT_FridaL_Front_Leg2/CAT_FridaL_Front_LegPalm/CAT_FridaL_Front_LegDigit01
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead/CAT_FridaL_Ear
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead/CAT_FridaL_Ear/CAT_FridaL_Ear_2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead/CAT_FridaL_Ear/CAT_FridaL_Ear_2/CAT_FridaL_Ear_3
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead/CAT_FridaR_Ear
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead/CAT_FridaR_Ear/CAT_FridaR_Ear_2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaNeck1/CAT_FridaNeck2/CAT_FridaNeck3/CAT_FridaHead/CAT_FridaR_Ear/CAT_FridaR_Ear_2/CAT_FridaR_Ear_3
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaR_Front_LegShoulderblade
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaR_Front_LegShoulderblade/CAT_FridaR_Front_Leg1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaR_Front_LegShoulderblade/CAT_FridaR_Front_Leg1/CAT_FridaR_Front_Leg2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaR_Front_LegShoulderblade/CAT_FridaR_Front_Leg1/CAT_FridaR_Front_Leg2/CAT_FridaR_Front_LegPalm
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaSpine1/CAT_FridaSpine2/CAT_FridaSpine3/CAT_FridaRibcage/CAT_FridaR_Front_LegShoulderblade/CAT_FridaR_Front_Leg1/CAT_FridaR_Front_Leg2/CAT_FridaR_Front_LegPalm/CAT_FridaR_Front_LegDigit01
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaTail1
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaTail1/CAT_FridaTail2
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaTail1/CAT_FridaTail2/CAT_FridaTail3
+        weight: 1
+      - path: CAT_FridaPelvis/CAT_FridaTail1/CAT_FridaTail2/CAT_FridaTail3/CAT_FridaTail4
+        weight: 1
+      - path: MSH_Frida
+        weight: 1
+      - path: MSH_Frida_Mask1
+        weight: 1
+      - path: MSH_Frida_Mask2
+        weight: 1
+      - path: MSH_Frida_Vest
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

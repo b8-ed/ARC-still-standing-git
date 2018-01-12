@@ -143,6 +143,10 @@ GameObject:
   - component: {fileID: 33972772221426308}
   - component: {fileID: 23464929845063938}
   - component: {fileID: 65780651656695866}
+  - component: {fileID: 65433895576620396}
+  - component: {fileID: 65238444857958790}
+  - component: {fileID: 65517049006808378}
+  - component: {fileID: 65048559350546496}
   m_Layer: 0
   m_Name: MSH_Room_Quad_Damaged_04
   m_TagString: Untagged
@@ -500,6 +504,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.31, y: 7.44, z: 0.4}
   m_Center: {x: 1.84, y: -1.96, z: -0.14}
+--- !u!65 &65048559350546496
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959874020092994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.3, z: 3.300002}
+  m_Center: {x: 1.69, y: -3.85, z: 1.3500009}
 --- !u!65 &65133922146205144
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -512,6 +528,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65238444857958790
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959874020092994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.37, y: 0.3, z: 3.300002}
+  m_Center: {x: -0.53, y: 3.85, z: 1.3500009}
+--- !u!65 &65433895576620396
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959874020092994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 8.000006, z: 3.300002}
+  m_Center: {x: 3.85, y: -0.00000023841852, z: 1.3500009}
+--- !u!65 &65517049006808378
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959874020092994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 0.3, z: 3.300002}
+  m_Center: {x: -2.73, y: -3.85, z: 1.3500009}
 --- !u!65 &65714446806007810
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -534,8 +586,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.000188, y: 8.000006, z: 3.340314}
-  m_Center: {x: 0, y: -0.00000023841852, z: 1.329845}
+  m_Size: {x: 0.3, y: 8.000006, z: 3.300002}
+  m_Center: {x: -3.85, y: -0.00000023841852, z: 1.3500009}
 --- !u!114 &114507700280940422
 MonoBehaviour:
   m_ObjectHideFlags: 1

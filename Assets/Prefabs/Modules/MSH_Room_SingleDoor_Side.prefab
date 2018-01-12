@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4478747877201698}
   - component: {fileID: 33705559302777126}
   - component: {fileID: 23182989048112718}
+  - component: {fileID: 65195011492153660}
   m_Layer: 0
   m_Name: MSH_Door_Single015
   m_TagString: Door
@@ -88,9 +89,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4313058671297618}
-  - component: {fileID: 65503474987518932}
   - component: {fileID: 114360056159871368}
   - component: {fileID: 65267999839255042}
+  - component: {fileID: 65243017711276836}
+  - component: {fileID: 65628361968406616}
+  - component: {fileID: 65898781823157612}
+  - component: {fileID: 65496028485971154}
   m_Layer: 0
   m_Name: MSH_Room_SingleDoor_Side
   m_TagString: Untagged
@@ -312,6 +316,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65195011492153660
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107589495166882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.94161135, y: 0.20261942, z: 1.9045767}
+  m_Center: {x: 0.47080567, y: 0.02013233, z: 0.9522883}
+--- !u!65 &65243017711276836
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982142020408066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 3.3, z: 3.99}
+  m_Center: {x: -1.85, y: 1.4, z: 0}
 --- !u!65 &65267999839255042
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -324,7 +352,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.5, y: 0.4, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65503474987518932
+--- !u!65 &65496028485971154
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -334,8 +362,32 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 3, z: 4}
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Size: {x: 0.3, y: 3.3, z: 2.5}
+  m_Center: {x: 1.85, y: 1.4, z: -0.73}
+--- !u!65 &65628361968406616
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982142020408066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.99, y: 3.3, z: 0.3}
+  m_Center: {x: 0, y: 1.4, z: -1.85}
+--- !u!65 &65898781823157612
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982142020408066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.99, y: 3.3, z: 0.3}
+  m_Center: {x: 0, y: 1.4, z: 1.85}
 --- !u!114 &114360056159871368
 MonoBehaviour:
   m_ObjectHideFlags: 1
