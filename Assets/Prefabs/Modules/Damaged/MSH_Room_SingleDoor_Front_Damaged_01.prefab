@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4552669897970164}
   - component: {fileID: 33878222779581906}
   - component: {fileID: 23038778818446216}
+  - component: {fileID: 65013657361199466}
   m_Layer: 0
   m_Name: MSH_Door_Single
   m_TagString: Door
@@ -343,6 +344,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &65013657361199466
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629243250452248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.94161135, y: 0.20261939, z: 1.9045773}
+  m_Center: {x: 0.4708058, y: 0.020132856, z: 0.9522886}
 --- !u!65 &65368753306816596
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -365,8 +378,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 3.5, z: 0.4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.5, y: 3.5, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.1}
 --- !u!65 &65573729209328404
 BoxCollider:
   m_ObjectHideFlags: 1
