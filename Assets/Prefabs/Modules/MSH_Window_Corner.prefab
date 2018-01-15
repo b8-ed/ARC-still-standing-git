@@ -58,9 +58,11 @@ GameObject:
   - component: {fileID: 23283750362075720}
   - component: {fileID: 65966606680736672}
   - component: {fileID: 65885409935692266}
+  - component: {fileID: 65611651732537662}
+  - component: {fileID: 65337135959106468}
   m_Layer: 0
   m_Name: MSH_Window_Corner
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,6 +163,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &65337135959106468
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948279392679232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.57, z: 3.300001}
+  m_Center: {x: -0.15, y: -1.81, z: 1.3500005}
+--- !u!65 &65611651732537662
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948279392679232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 4.000001, z: 3.300001}
+  m_Center: {x: -1.81, y: 0.00000011920932, z: 1.3500005}
 --- !u!65 &65885409935692266
 BoxCollider:
   m_ObjectHideFlags: 1

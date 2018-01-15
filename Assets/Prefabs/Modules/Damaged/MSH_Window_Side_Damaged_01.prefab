@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 33195506273631980}
   - component: {fileID: 23260287624145684}
   - component: {fileID: 65945923655986934}
+  - component: {fileID: 65272451050497274}
   m_Layer: 0
   m_Name: MSH_Window_Side_Damaged_01
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +114,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1977383485408592}
   m_Mesh: {fileID: 4300000, guid: e146032a31c77a748b1f9c1f38484fbc, type: 3}
+--- !u!65 &65272451050497274
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977383485408592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.66, y: 4.0000014, z: 3.3000011}
+  m_Center: {x: -2.03, y: -2.3716923e-20, z: 1.3500006}
 --- !u!65 &65293676976896424
 BoxCollider:
   m_ObjectHideFlags: 1

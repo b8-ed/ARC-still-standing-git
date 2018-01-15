@@ -9,7 +9,10 @@ public class Person : MonoBehaviour {
     public float MaxHumo = 100.0f;
     
     public static bool didEarthquakeHappen = false;
+    public static bool isEarthquakeHappening = false;
     public GameObject deathWarning;
+
+    private bool isAlive = true;
 
     private void Start()
     {
@@ -29,31 +32,42 @@ public class Person : MonoBehaviour {
     }
     public void Muerte(Trigger.Muertes muerte)
     {
-        FindObjectOfType<pantallaGameOver_>().BeginGameOver();
-        string temp = muerte.ToString();
-        temp = temp.Replace('_', ' ');
-        if (Scr_Lang.isEnglish)
+        if(isAlive)
         {
-            int index = (int)muerte;
-            Trigger.Deaths death = (Trigger.Deaths)(index);
-            string str = death.ToString();
-            str = str.Replace('_', ' ');
-            FindObjectOfType<pantallaGameOver_>().mandarMensaje("Death by: " + str);
-        }
-        else
-            FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + temp);
+            isAlive = false;
+
+            FindObjectOfType<pantallaGameOver_>().BeginGameOver();
+            string temp = muerte.ToString();
+            temp = temp.Replace('_', ' ');
+            if (Scr_Lang.isEnglish)
+            {
+                int index = (int)muerte;
+                Trigger.Deaths death = (Trigger.Deaths)(index);
+                string str = death.ToString();
+                str = str.Replace('_', ' ');
+                FindObjectOfType<pantallaGameOver_>().mandarMensaje("Death by: " + str);
+            }
+            else
+                FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + temp);
+        }       
     }
 
     public void Muerte(string deathBy)
     {
-        FindObjectOfType<pantallaGameOver_>().BeginGameOver();
-
-        if (Scr_Lang.isEnglish)
+        if(isAlive)
         {
-            FindObjectOfType<pantallaGameOver_>().mandarMensaje("Death by: " + deathBy);
+            isAlive = false;
+
+            FindObjectOfType<pantallaGameOver_>().BeginGameOver();
+
+            if (Scr_Lang.isEnglish)
+            {
+                FindObjectOfType<pantallaGameOver_>().mandarMensaje("Death by: " + deathBy);
+            }
+            else
+                FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + deathBy);
         }
-        else
-            FindObjectOfType<pantallaGameOver_>().mandarMensaje("Muerte por: " + deathBy);
+        
     }
 
     public void DisplayWarning(string str)

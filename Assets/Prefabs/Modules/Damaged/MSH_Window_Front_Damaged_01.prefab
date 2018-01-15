@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33477711149234370}
   - component: {fileID: 23711724939607476}
   - component: {fileID: 65179477558107456}
+  - component: {fileID: 65296769792601076}
   m_Layer: 0
   m_Name: MSH_Window_Front_Damaged_01
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +121,18 @@ BoxCollider:
   m_GameObject: {fileID: 1243688400604078}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.69, z: 3.3000007}
+  m_Center: {x: 0, y: -1.9, z: 1.3500004}
+--- !u!65 &65296769792601076
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243688400604078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 0.69, z: 3.3000007}

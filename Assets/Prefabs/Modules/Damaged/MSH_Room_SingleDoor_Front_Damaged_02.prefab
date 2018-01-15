@@ -97,9 +97,11 @@ GameObject:
   - component: {fileID: 4430470726260522}
   - component: {fileID: 33768354295038026}
   - component: {fileID: 23018548033261920}
+  - component: {fileID: 65725013715992330}
+  - component: {fileID: 114496739116848488}
   m_Layer: 0
   m_Name: MSH_Room_SingleDoor_Front
-  m_TagString: Untagged
+  m_TagString: Damaged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,6 +395,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.94161135, y: 0.20261939, z: 1.9045773}
   m_Center: {x: 0.47080567, y: 0.020132856, z: 0.9522886}
+--- !u!65 &65725013715992330
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770506765448280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 1, z: 3.0000007}
+  m_Center: {x: -0.00000011920929, y: -1.8500006, z: 1.5000008}
 --- !u!65 &65726376004787224
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -441,6 +455,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 4.000003, z: 3.3000014}
   m_Center: {x: 1.85, y: 0.0000009536745, z: 1.3500007}
+--- !u!114 &114496739116848488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770506765448280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d204781614902d04a953f139b3aff24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v_muertes: 2
+  TimerElevador: 5
 --- !u!114 &114804300040633276
 MonoBehaviour:
   m_ObjectHideFlags: 1

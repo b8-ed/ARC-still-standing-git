@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33260857165517890}
   - component: {fileID: 23750455146763138}
   - component: {fileID: 65751413151248102}
+  - component: {fileID: 65535224974056442}
   m_Layer: 0
   m_Name: MSH_Window_Front
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +114,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1202101947669054}
   m_Mesh: {fileID: 4300008, guid: 3168882d06c8bd54d81bc422a247d2f8, type: 3}
+--- !u!65 &65535224974056442
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202101947669054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.69, z: 3.3000007}
+  m_Center: {x: 0, y: -1.9, z: 1.3500004}
 --- !u!65 &65751413151248102
 BoxCollider:
   m_ObjectHideFlags: 1

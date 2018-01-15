@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DoorFrame
   - Door
+  - Window
+  - Damaged
   layers:
   - Default
   - TransparentFX

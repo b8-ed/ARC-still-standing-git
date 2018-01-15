@@ -23,9 +23,11 @@ GameObject:
   - component: {fileID: 23896959586302486}
   - component: {fileID: 65620313860575082}
   - component: {fileID: 65797525596511110}
+  - component: {fileID: 65535406736816526}
+  - component: {fileID: 65244768292079650}
   m_Layer: 0
   m_Name: MSH_Window_Corner_Damaged_01
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +115,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300688517151968}
   m_Mesh: {fileID: 4300000, guid: 40c681a2960a7164095fdcabd193f8b4, type: 3}
+--- !u!65 &65244768292079650
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300688517151968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.57, z: 3.300001}
+  m_Center: {x: -0.15, y: -1.81, z: 1.3500005}
+--- !u!65 &65535406736816526
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300688517151968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 4.000001, z: 3.300001}
+  m_Center: {x: -1.81, y: 0.00000011920932, z: 1.3500005}
 --- !u!65 &65620313860575082
 BoxCollider:
   m_ObjectHideFlags: 1

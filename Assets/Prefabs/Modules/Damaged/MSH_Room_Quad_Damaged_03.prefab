@@ -29,6 +29,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1069638724548540
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4517460023235108}
+  - component: {fileID: 65191087808919962}
+  - component: {fileID: 114245758152031568}
+  m_Layer: 0
+  m_Name: Pared Daniada
+  m_TagString: Damaged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1323291877444320
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +225,7 @@ Transform:
   m_Children:
   - {fileID: 4543136141790154}
   - {fileID: 4184121523169078}
+  - {fileID: 4517460023235108}
   m_Father: {fileID: 4477972655161782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -225,6 +243,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!4 &4517460023235108
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069638724548540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4463582549521436}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4530168635486356
 Transform:
   m_ObjectHideFlags: 1
@@ -517,6 +548,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.94161135, y: 0.20261939, z: 1.9045773}
   m_Center: {x: 0.4708058, y: 0.02013095, z: 0.9522886}
+--- !u!65 &65191087808919962
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069638724548540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 1.07, z: 3.300002}
+  m_Center: {x: 1.69, y: -3.85, z: 1.3500009}
 --- !u!65 &65205165934455368
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -613,6 +656,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 0.3, z: 3.300002}
   m_Center: {x: -2.73, y: -3.85, z: 1.3500009}
+--- !u!114 &114245758152031568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069638724548540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d204781614902d04a953f139b3aff24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v_muertes: 2
+  TimerElevador: 5
 --- !u!114 &114648411160229188
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 33365783138386450}
   - component: {fileID: 23736183846873058}
   - component: {fileID: 65154087129429338}
+  - component: {fileID: 114224996339523294}
   m_Layer: 0
   m_Name: MSH_Room_Double_Damaged_03
-  m_TagString: Untagged
+  m_TagString: Damaged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,11 +336,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1980892168219586}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.000002, y: 4.0000005, z: 3.340313}
-  m_Center: {x: 0, y: 0.00000023841858, z: 1.3298442}
+  m_Size: {x: 8.000002, y: 1.3, z: 1}
+  m_Center: {x: 0, y: -0.99, z: 0.59}
 --- !u!65 &65221162565948796
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -400,6 +401,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 3.97, z: 3.3}
   m_Center: {x: -1.8, y: 0, z: 1.35}
+--- !u!114 &114224996339523294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980892168219586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d204781614902d04a953f139b3aff24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v_muertes: 2
+  TimerElevador: 5
 --- !u!114 &114732795859628778
 MonoBehaviour:
   m_ObjectHideFlags: 1

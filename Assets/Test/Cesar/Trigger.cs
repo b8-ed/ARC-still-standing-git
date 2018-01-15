@@ -12,7 +12,7 @@ public class Trigger : MonoBehaviour
         elevador,
         estructura_inestable,
         cable,
-        vidrios_muro,
+        Ventanas_Durante_Temblor,
         Zona_Segura
     }
 
@@ -23,7 +23,7 @@ public class Trigger : MonoBehaviour
         Elevator,
         Failed_Structure,
         Cable,
-        Windows,
+        Windows_During_Earthquake,
         Safe_Zone
     }
 
@@ -60,10 +60,10 @@ public class Trigger : MonoBehaviour
                 Derrumbe();
                 KillPlayerBy(person.GetComponent<Person>(), Muertes.estructura_inestable);
             }
-            else if (person.tag == "Player" && v_muertes == Muertes.vidrios_muro)
+            else if (person.tag == "Player" && v_muertes == Muertes.Ventanas_Durante_Temblor)
             {
                 Derrumbe();
-                KillPlayerBy(person.GetComponent<Person>(), Muertes.vidrios_muro);
+                KillPlayerBy(person.GetComponent<Person>(), Muertes.Ventanas_Durante_Temblor);
             }
         }
        

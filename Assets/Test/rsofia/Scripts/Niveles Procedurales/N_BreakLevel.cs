@@ -30,7 +30,7 @@ public class N_BreakLevel : MonoBehaviour
     IEnumerator Break()
     {
         yield return new WaitForSeconds(secondsTillBreak);
-        //print("CALLED");
+        Person.isEarthquakeHappening = true;
         shakeCam.ShakeCam();
         StartCoroutine(WaitForEarthQuake());
     }
@@ -47,6 +47,7 @@ public class N_BreakLevel : MonoBehaviour
         else
             person.HideWarning();
         Earthquake();
+        Person.isEarthquakeHappening = false;
     }
 
     public void Earthquake()

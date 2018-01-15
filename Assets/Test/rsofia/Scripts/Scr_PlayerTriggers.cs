@@ -17,6 +17,17 @@ public class Scr_PlayerTriggers : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Person.isEarthquakeHappening)
+        {
+            if (other.tag == "Window")
+            {
+                GetComponent<Person>().Muerte(Trigger.Muertes.Ventanas_Durante_Temblor);
+            }
+        }
+    }
+
     void OpenDoor(Transform doorFrame)
     {
         print("opening doors " + doorFrame.name + " parent " + doorFrame.parent.name);
