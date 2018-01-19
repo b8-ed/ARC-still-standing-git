@@ -10,7 +10,7 @@ public class scr_Player : MonoBehaviour {
 	public bool Ruido;
 
 	float CDRuido;
-
+    
 	void Awake()
 	{
 		P = this;
@@ -38,4 +38,5 @@ public class scr_Player : MonoBehaviour {
 			}
 		}
 	}
+
 }

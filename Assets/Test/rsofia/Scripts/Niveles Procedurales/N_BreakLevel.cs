@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class N_BreakLevel : MonoBehaviour
 {
-    public N_Modules[] allModules;
     public N_Base b;
     private float secondsToWait = 60;
     private Scr_ShakeCamera shakeCam;
@@ -57,26 +56,25 @@ public class N_BreakLevel : MonoBehaviour
         {
             for(int j = 0; j < b.maxGridSize.y; j++)
             {
-                //Set index for all modules
-                int index = b.grid[i, j].idModule - 1;
-                //Damage only if we have a damaged version of the model
-                if (allModules[index].damagedVersion.Length > 0)
+                int randDmg = Random.Range(0, 100);
+                if (randDmg < 70)
                 {
-                    //Random that it breaks
-                    int randDmg = Random.Range(0, 100);
-                    if (randDmg < 70)
+                    //It breaks randomly
+                    if(b.grid[i, j].obj.GetComponent<N_Modules>() != null)
                     {
-                        int chosen = Random.Range(0, allModules[index].damagedVersion.Length);
-                        SwapRooms(allModules[index].damagedVersion[chosen], b.grid[i, j].obj.transform.rotation, b.grid[i, j].obj.transform.position, i, j);                       
-                    }
-                    else if (allModules[index].safeVersion.Length > 0) //Not every damage has a safe version, check that it does
-                    {
-                        //Safe but Destroyed
-                        int chosen = Random.Range(0, allModules[index].safeVersion.Length);
-                        SwapRooms(allModules[index].safeVersion[chosen], b.grid[i, j].obj.transform.rotation, b.grid[i, j].obj.transform.position, i, j);
-                    }
+                        if (b.grid[i, j].obj.GetComponent<N_Modules>().damagedVersion.Length > 0)
+                        {
+                            int chosen = Random.Range(0, b.grid[i, j].obj.GetComponent<N_Modules>().damagedVersion.Length);
+                            SwapRooms(b.grid[i, j].obj.GetComponent<N_Modules>().damagedVersion[chosen], b.grid[i, j].obj.transform.rotation, b.grid[i, j].obj.transform.position, i, j);
+                        }
+                        else if (b.grid[i, j].obj.GetComponent<N_Modules>().safeVersion.Length > 0) //Not every damage has a safe version, check that it does
+                        {
+                            //Safe but Destroyed
+                            int chosen = Random.Range(0, b.grid[i, j].obj.GetComponent<N_Modules>().safeVersion.Length);
+                            SwapRooms(b.grid[i, j].obj.GetComponent<N_Modules>().safeVersion[chosen], b.grid[i, j].obj.transform.rotation, b.grid[i, j].obj.transform.position, i, j);
+                        }
+                    }                    
                 }
-               
             }
         }
     }
@@ -98,31 +96,5 @@ public class N_BreakLevel : MonoBehaviour
         b = temp;
     }
 
-    public void sortModulesById()
-    {
-        bool swap;
-        int j;
-        int i;
-        int n = allModules.Length;
-        for (i = 0; i < n-1; i++)
-        {
-            swap = false;
-            for(j = 0; j < n - i-1; j++)
-            {
-                if(allModules[j].id > allModules[j+1].id)
-                {
-                    swapValues(allModules[j], allModules[j + 1]);
-                    swap = true;
-                }
-            }
-
-            //break if no swap made
-            if(!swap)
-            {
-                break;
-            }
-        }
-    }
-
-   
+  
 }

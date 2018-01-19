@@ -12,6 +12,10 @@ public class Person : MonoBehaviour {
     public static bool isEarthquakeHappening = false;
     public GameObject deathWarning;
 
+    [Header("Character on Situations")]
+    public GameObject normalChar;
+    public GameObject rescuerChar;
+
     private bool isAlive = true;
 
     private void Start()
@@ -79,6 +83,19 @@ public class Person : MonoBehaviour {
     public void HideWarning()
     {
         deathWarning.SetActive(false);
+    }
+
+    // -- PARA SITUACIONES -- \\
+    public void RescuerSituation()
+    {
+        normalChar.SetActive(false);
+        rescuerChar.SetActive(true);
+    }
+
+    public void CivilianSituation()
+    {
+        normalChar.SetActive(true);
+        rescuerChar.SetActive(false);
     }
 
 }
