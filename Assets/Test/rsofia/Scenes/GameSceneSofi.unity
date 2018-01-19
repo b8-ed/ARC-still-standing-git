@@ -559,6 +559,11 @@ Prefab:
       value: 
       objectReference: {fileID: 114231280741160220, guid: f1ed0afb4a97284418ab86db2dc62ead,
         type: 2}
+    - target: {fileID: 114984158918301122, guid: 746092e448767874e803f47e7334db68,
+        type: 2}
+      propertyPath: situaciones
+      value: 
+      objectReference: {fileID: 417810758}
     m_RemovedComponents:
     - {fileID: 114884184902795708, guid: 746092e448767874e803f47e7334db68, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 746092e448767874e803f47e7334db68, type: 2}
@@ -2207,8 +2212,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.309998, y: -40}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -56.155, y: -44.56}
+  m_SizeDelta: {x: 112.31, y: 40.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755693102
 MonoBehaviour:
@@ -2229,7 +2234,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Situacion
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
@@ -2263,7 +2268,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2296,13 +2301,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1755693102}
-    characterCount: 9
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0

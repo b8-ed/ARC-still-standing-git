@@ -28,18 +28,62 @@ public class Scr_Situaciones : MonoBehaviour
     {
         int rand = Random.Range(0, 7);
         if (rand == (int)Situaciones._RESCUER)
-            FindObjectOfType<Person>().CivilianSituation();
-        else
             FindObjectOfType<Person>().RescuerSituation();
+        else
+            FindObjectOfType<Person>().CivilianSituation();
         gameSituation = (Situaciones)rand;
 
-        DisplaySituation();
+       
     }
 
-    void DisplaySituation()
+    public void DisplaySituation()
     {
-        string temp = gameSituation.ToString();
-        temp.Replace('_', ' ');
-        situationText.text = gameSituation.ToString();
+        string temp = "";
+        switch (gameSituation)
+        {
+            case Situaciones._BROKENLEG:
+                if (!Scr_Lang.isEnglish)
+                    temp = "PIERNA ROTA";
+                else
+                    temp = "BROKEN LEG";
+                break;
+            case Situaciones._NOISE:
+                if (!Scr_Lang.isEnglish)
+                    temp = "HAZ RUIDO";
+                else
+                    temp = "MAKE NOISE";
+                break;
+            case Situaciones._FIRE:
+                if (!Scr_Lang.isEnglish)
+                    temp = "INCENDIO";
+                else
+                    temp = "FIRE";
+                break;
+            case Situaciones._FOLLOWDOG:
+                if (!Scr_Lang.isEnglish)
+                    temp = "FRIDA";
+                else
+                    temp = "FRIDA";
+                break;
+            case Situaciones._GASLEAK:
+                if (!Scr_Lang.isEnglish)
+                    temp = "FUGA DE GAS";
+                else
+                    temp = "GAS LEAK";
+                break;
+            case Situaciones._PROVISIONS:
+                if (!Scr_Lang.isEnglish)
+                    temp = "PROVISIONES";
+                else
+                    temp = "PROVISIONS";
+                break;
+            case Situaciones._RESCUER:
+                if (!Scr_Lang.isEnglish)
+                    temp = "RESCATISTA";
+                else
+                    temp = "RESCUER";
+                break;
+        }
+        situationText.text = temp;
     }
 }

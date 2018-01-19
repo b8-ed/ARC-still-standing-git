@@ -14,6 +14,8 @@ public class N_BreakLevel : MonoBehaviour
     private float secondsTillBreak = 0;
     Person person;
 
+    public Scr_Situaciones situaciones;
+
     private void Start()
     {
         //sortModulesById();
@@ -47,6 +49,7 @@ public class N_BreakLevel : MonoBehaviour
             person.HideWarning();
         Earthquake();
         Person.isEarthquakeHappening = false;
+        situaciones.DisplaySituation();
     }
 
     public void Earthquake()
@@ -60,7 +63,7 @@ public class N_BreakLevel : MonoBehaviour
                 if (randDmg < 70)
                 {
                     //It breaks randomly
-                    if(b.grid[i, j].obj.GetComponent<N_Modules>() != null)
+                    if(b.grid[i, j].obj != null && b.grid[i, j].obj.GetComponent<N_Modules>() != null)
                     {
                         if (b.grid[i, j].obj.GetComponent<N_Modules>().damagedVersion.Length > 0)
                         {
