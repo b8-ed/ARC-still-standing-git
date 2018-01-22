@@ -21,7 +21,8 @@ public class N_Base : MonoBehaviour
     public N_Grid[,] grid;
 
     bool[] isEscapeDisplayed = { false, false}; //cannot be more than 2 escape
-    bool[] isStairsDisplayed = { false, false };
+    bool[] isStairsDisplayed = { false }; //cannot be more than 1
+    bool isKitchenDisplayed = false; //cannot be more than 1 kitchen
     bool isElevadorDisplayed = false;
     
     //id of prefab modules
@@ -39,7 +40,9 @@ public class N_Base : MonoBehaviour
         _10_WALL_SIDE,
         _11_WINDOW_CORNER,
         _12_WINDOW__FRONT,
-        _13_WINDOW_SIDE
+        _13_WINDOW_SIDE,
+        _14_QUADWAREHOUSE,
+        _15_DOUBLE_KITCHEN = 14,
     }
 
     private void Start()
@@ -194,7 +197,7 @@ public class N_Base : MonoBehaviour
                             }
                         }
                     } //No dejar que el quad quede a la orilla por sus dobles puertas (no puertas en vez de paredes)s
-                    else if (index == (int)Modules._03_QUAD)
+                    else if (index == (int)Modules._03_QUAD || index == (int)Modules._14_QUADWAREHOUSE)
                     {
                         if (j >= 10)
                         {
@@ -206,6 +209,7 @@ public class N_Base : MonoBehaviour
                         {
                             exit = false;
                         }
+                        //Llenar los 4
 
                         //print("Quad j " + j);
                     }//no mas de dos cuartos juntos
@@ -222,8 +226,19 @@ public class N_Base : MonoBehaviour
                                 exit = false;
                             }
                     }
-                    else if(index == (int)Modules._01_DOUBLE)
+                    else if(index == (int)Modules._01_DOUBLE || index == (int)Modules._15_DOUBLE_KITCHEN)
                     {
+                        //Solo puede haber 1 cocina. Si ya hay, convertirla al otro cuarto
+                        if (index == (int)Modules._15_DOUBLE_KITCHEN && !isKitchenDisplayed)
+                        {
+                            isKitchenDisplayed = true;
+                            Debug.Log("KITCHEN DISPLAYED!");
+                        }
+                        else
+                            index = (int)Modules._01_DOUBLE;
+
+                        Debug.Log("Index in kitchen" + index);
+
                         if (j > 0 && j < maxGridSize.y)
                             if (grid[i, j + 1].idModule != 0)
                             {
@@ -234,9 +249,21 @@ public class N_Base : MonoBehaviour
                         exit = true;
                    
                 } while (!exit);
-                
 
                 id = piezasModularesPrefab[index].id;
+                //WTF IS GOING ON HERE, WHY IS MORE THAN ONE KITCHEN. 
+                //Parche feo de la cocina
+                if (id == 15)
+                {
+                    if(isKitchenDisplayed)
+                    {
+                        index = 1;
+                        id = piezasModularesPrefab[1].id;
+                        Debug.Log("ID " + id + " Index " + index);
+                    }
+                    else { isKitchenDisplayed = true; }
+                    
+                }
                 //Check if prefab's size is bigger than 1x1. if it is, fill the grid spaces with its id
                 int lengthRow = piezasModularesPrefab[index].gridLayout.Length;
                 bool facingHorizontal = false;
@@ -268,7 +295,7 @@ public class N_Base : MonoBehaviour
                         }
                     }
 
-                    if(id == 4)
+                    if(id == 4 || id == 16)
                     {
                         grid[i, j].idModule = id;
                         grid[i + 1, j].idModule = id;
@@ -278,7 +305,7 @@ public class N_Base : MonoBehaviour
                 }
 
                 //Stairs special rotation && double room
-                if (!facingHorizontal && (index == (int)Modules._08_WALL_CORNER))// || index == (int)Modules._02_DOUBLE_DOOR)) //&& id != 4) //
+                if (!facingHorizontal && (index == (int)Modules._08_WALL_CORNER))//|| index == (int)Modules._01_DOUBLE) //&& id != 4) //
                 {
                     _rotation -= 90;
                 }

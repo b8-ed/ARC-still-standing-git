@@ -36,9 +36,10 @@ GameObject:
   - component: {fileID: 4921726311396114}
   - component: {fileID: 33844084202504202}
   - component: {fileID: 23767820278422208}
+  - component: {fileID: 65748015598996632}
   m_Layer: 0
   m_Name: G_Tubo_Gas (1)
-  m_TagString: Untagged
+  m_TagString: Gas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,8 +148,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094080110799182}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.008388042, y: 0.8600404, z: -2.1440306}
+  m_LocalRotation: {x: 0.7071068, y: 0.00000025288108, z: 0.00000025288108, w: 0.7071068}
+  m_LocalPosition: {x: 0.24000005, y: 2.19, z: 0.8599999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4921726311396114}
@@ -159,7 +160,7 @@ Transform:
   - {fileID: 4118356905473344}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!4 &4217124230454762
 Transform:
   m_ObjectHideFlags: 1
@@ -473,3 +474,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1108061691938932}
   m_Mesh: {fileID: 4300118, guid: b09d25241ac1b9d48876bc8e11673517, type: 3}
+--- !u!65 &65748015598996632
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108061691938932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Center: {x: 0.012016568, y: -0.0000026319176, z: 0.3}

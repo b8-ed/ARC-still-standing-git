@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Window
   - Damaged
+  - Gas
+  - FireExtinguisher
   layers:
   - Default
   - TransparentFX
