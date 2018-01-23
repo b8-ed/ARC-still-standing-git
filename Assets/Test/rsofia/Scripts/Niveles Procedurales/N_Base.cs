@@ -21,7 +21,7 @@ public class N_Base : MonoBehaviour
     public N_Grid[,] grid;
 
     bool[] isEscapeDisplayed = { false, false}; //cannot be more than 2 escape
-    bool[] isStairsDisplayed = { false }; //cannot be more than 1
+    bool[] isStairsDisplayed = { false, false }; //cannot be more than 1
     bool isKitchenDisplayed = false; //cannot be more than 1 kitchen
     bool isElevadorDisplayed = false;
     
@@ -258,7 +258,7 @@ public class N_Base : MonoBehaviour
                     if(isKitchenDisplayed)
                     {
                         index = 1;
-                        id = piezasModularesPrefab[1].id;
+                        id = piezasModularesPrefab[index].id;
                         Debug.Log("ID " + id + " Index " + index);
                     }
                     else { isKitchenDisplayed = true; }
@@ -309,11 +309,21 @@ public class N_Base : MonoBehaviour
                 {
                     _rotation -= 90;
                 }
+                if(!facingHorizontal && (index == (int)Modules._01_DOUBLE))
+                {
+                    _rotation += 90;
+                }
+
+                if(!facingHorizontal && (id == 15)) //ID DE LA COCINA
+                {
+                    _rotation += 90;
+                    Debug.Log("Rotation facing horizontal " + index);
+                }
 
 
                 grid[i, j].idModule = id;
                 grid[i, j].obj = Instantiate(piezasModularesPrefab[index].gameObject, gridParent);
-                //grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
+                grid[i, j].obj.transform.Rotate(new Vector3(0, 0, _rotation));
 
 
                 if (facingHorizontal)
