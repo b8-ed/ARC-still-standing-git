@@ -36,7 +36,6 @@ GameObject:
   - component: {fileID: 4162282325277390}
   - component: {fileID: 114618907655063316}
   - component: {fileID: 114984158918301122}
-  - component: {fileID: 114884184902795708}
   m_Layer: 0
   m_Name: Level Maker
   m_TagString: Untagged
@@ -98,6 +97,8 @@ MonoBehaviour:
   - {fileID: 114231280741160220, guid: f1ed0afb4a97284418ab86db2dc62ead, type: 2}
   - {fileID: 114773255883749620, guid: e707e1659febbd647b0573ab461d2720, type: 2}
   - {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}
+  - {fileID: 114381446112185820, guid: 130fe2458d6c0a747a85ba82354562f2, type: 2}
+  - {fileID: 114428684904322268, guid: 1f0879138a5a7c841b135506fc245467, type: 2}
   corners:
   - {fileID: 114913423267415530, guid: c1ab0ca3d0dbc70429586f7f652fb3bd, type: 2}
   - {fileID: 114685443736652444, guid: 61502a4791c442143b4f6fff57982944, type: 2}
@@ -108,22 +109,6 @@ MonoBehaviour:
   - {fileID: 114773255883749620, guid: e707e1659febbd647b0573ab461d2720, type: 2}
   elevador: {fileID: 114288235163877484, guid: f17bc2ca4426fc741a4d137ad000250c, type: 2}
   maxGridSize: {x: 10, y: 15}
---- !u!114 &114884184902795708
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614271378695024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c28e408a26f0e9c439ff7bc49f690fcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camMainT: {fileID: 0}
-  minMov: 1
-  maxMov: 2
-  lerpTime: 0.11
-  timesToShake: 5
 --- !u!114 &114984158918301122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,19 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c88756febc9154f9801dca3af7c8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allModules:
-  - {fileID: 114960971407361888, guid: 84bdd343758515b43b7271c75415aa67, type: 2}
-  - {fileID: 114206587616391994, guid: 4d20ac91b5504824d8769b8d160f16e4, type: 2}
-  - {fileID: 114288235163877484, guid: f17bc2ca4426fc741a4d137ad000250c, type: 2}
-  - {fileID: 114922781442815598, guid: 853f9490a0ed55e408255715fd550c47, type: 2}
-  - {fileID: 114262770886404652, guid: f59fa785c5df7764cbcf549ca32e1a0f, type: 2}
-  - {fileID: 114360056159871368, guid: da2023355b87ebf41abcc4482313d63e, type: 2}
-  - {fileID: 114602394944252182, guid: 421fc0e8c0518674d849f95d2250f706, type: 2}
-  - {fileID: 114493030180438498, guid: ff5baef353ba7a444a54999fa46ce512, type: 2}
-  - {fileID: 114913423267415530, guid: c1ab0ca3d0dbc70429586f7f652fb3bd, type: 2}
-  - {fileID: 114138832684379142, guid: facb553a1488377458bb36bb69a0c005, type: 2}
-  - {fileID: 114692417774944294, guid: 3e0228072c59adf46bea6df8175552e3, type: 2}
-  - {fileID: 114685443736652444, guid: 61502a4791c442143b4f6fff57982944, type: 2}
-  - {fileID: 114231280741160220, guid: f1ed0afb4a97284418ab86db2dc62ead, type: 2}
-  - {fileID: 114773255883749620, guid: e707e1659febbd647b0573ab461d2720, type: 2}
   b: {fileID: 114618907655063316}
+  situaciones: {fileID: 0}

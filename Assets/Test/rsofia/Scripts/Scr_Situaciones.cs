@@ -99,4 +99,9 @@ public class Scr_Situaciones : MonoBehaviour
         }
         situationText.text = temp;
     }
+
+    public void GasLeak()
+    {
+
+    }
 }
