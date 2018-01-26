@@ -31,9 +31,8 @@ public class Scr_Situaciones : MonoBehaviour
             FindObjectOfType<Person>().RescuerSituation();
         else
             FindObjectOfType<Person>().CivilianSituation();
-        gameSituation = (Situaciones)rand;
-
-       
+        gameSituation = (Situaciones)rand;  
+        //gameSituation = Situaciones._FIRE;
     }
 
     public void DisplaySituation()
@@ -54,10 +53,24 @@ public class Scr_Situaciones : MonoBehaviour
                     temp = "MAKE NOISE";
                 break;
             case Situaciones._FIRE:
-                if (!Scr_Lang.isEnglish)
-                    temp = "INCENDIO";
-                else
-                    temp = "FIRE";
+                {
+                    if (!Scr_Lang.isEnglish)
+                        temp = "INCENDIO";
+                    else
+                        temp = "FIRE";
+
+                    GameObject[] Floor = GameObject.FindGameObjectsWithTag("Floor");
+                    for(int i = 0; i < Floor.Length; i++)
+                    {
+                        int particleRandom = Random.Range(0, 100);
+
+                        if (particleRandom > 65)
+                            Floor[i].GetComponent<SCR_SpawnParticles>().SpawnFire();
+
+                        if (particleRandom > 45)
+                            Floor[i].GetComponent<SCR_SpawnParticles>().SpawnSmoke();
+                    }
+                }               
                 break;
             case Situaciones._FOLLOWDOG:
                 if (!Scr_Lang.isEnglish)

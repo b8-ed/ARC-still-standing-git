@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Window
   - Damaged
+  - Floor
   layers:
   - Default
   - TransparentFX
